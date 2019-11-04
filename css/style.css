@@ -1335,17 +1335,16 @@ margin-top: -200px;
 }
 /* SUBSCRIBE */
 .subscribe {
-  /* z-index: 10;
+   z-index: 10;
   position: relative;
   height: 600px;
-  overflow: hidden; */
+  overflow: hidden; 
 
 }
 .subscribe .bgimg {
   min-height: 550px;
   background: transparent;
-  padding: 20px 0;
-  margin-top: 100px;
+  
 }
 .homepage .subscribe .bgimg {
   min-height: 400px;
@@ -1356,7 +1355,6 @@ margin-top: -200px;
   margin-top: 0px;
 }
 .subscribe-area {
-  margin:40px 0;
   background: rgba(51, 38, 66, 0.8);
   color:#fff;
   padding: 40px;
