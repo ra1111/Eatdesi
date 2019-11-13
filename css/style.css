@@ -15,7 +15,25 @@ body {
   font-weight: 400;
   src: url("../webfonts/fa-solid-900.eot");
   src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
-
+.subs{
+  display: flex;
+  justify-content: center;
+}
+.box-container{
+  min-height: 100%;
+}
+.price-1{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.price-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 
 h2 {
   font-size: 73px;
@@ -1457,13 +1475,13 @@ margin: 50px 0 100px 0;
   position: absolute;
   top: -20px;
   background: #fff;
-  left: 40%;
+  left: 30%;
   font-size: 25px;
   color:#474747;
   font-style: normal;
   font-weight: 500;
-  width:70px;
-  height: 70px;
+  width:130px;
+  height: 75px;
 }
 .pricing .price-2 .price {
   color: #e0413d;
