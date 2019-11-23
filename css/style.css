@@ -1057,26 +1057,26 @@ left: 44%;
     left top, left bottom, 
     from(rgba(215, 52, 100, 0.8)), 
     to(rgba(54, 9, 105, 0.8))
-  ),
-  url(../images/1405x1193.png) no-repeat;
+  );
+  
   background:
   -webkit-linear-gradient(
     rgba(215, 52, 100, 0.8), 
     rgba(54, 9, 105, 0.8)
-  ),
-  url(../images/1405x1193.png) no-repeat;
+  );
+  
   background:
   -o-linear-gradient(
     rgba(215, 52, 100, 0.8), 
     rgba(54, 9, 105, 0.8)
-  ),
-  url(../images/1405x1193.png) no-repeat;
+  );
+  
   background:
   linear-gradient(
     rgba(215, 52, 100, 0.8), 
     rgba(54, 9, 105, 0.8)
-  ),
-  url(../images/1405x1193.png) no-repeat;
+  );
+  
   background-size:cover;
   min-height: 850px;
   position: relative;
@@ -1429,22 +1429,22 @@ margin: 50px 0 100px 0;
 }
 
 .price-1 h5 {
-  background: -webkit-gradient( linear, left top, left bottom, from(rgba(54, 9, 105, 0.8)), to(rgba(54, 9, 105, 0.8)) ), url(../images/512x342.png) no-repeat center center;
-  background: -webkit-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
-  background: -o-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
-  background: linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
+  background: -webkit-gradient( linear, left top, left bottom, from(rgba(54, 9, 105, 0.8)), to(rgba(54, 9, 105, 0.8)) );
+  background: -webkit-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
+  background: -o-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
+  background: linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
 }
 .price-2 h5 {
-  background: -webkit-gradient( linear, left top, left bottom, from(rgba(215, 52, 100, 0.8)), to(rgba(54, 9, 105, 0.8)) ), url(../images/512x342.png) no-repeat center center;
-  background: -webkit-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
-  background: -o-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
-  background: linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat center center;
+  background: -webkit-gradient( linear, left top, left bottom, from(rgba(215, 52, 100, 0.8)), to(rgba(54, 9, 105, 0.8)) );
+  background: -webkit-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) );
+  background: -o-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) );
+  background: linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) );
 }
 .price-3 h5 {
-  background: -webkit-gradient( linear, left top, left bottom, from(rgba(54, 9, 105, 0.8)), to(rgba(54, 9, 105, 0.8)) ), url(../images/512x342.png) no-repeat right bottom;
-  background: -webkit-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat right bottom;
-  background: -o-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat right bottom;
-  background: linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) ), url(../images/512x342.png) no-repeat right bottom;
+  background: -webkit-gradient( linear, left top, left bottom, from(rgba(54, 9, 105, 0.8)), to(rgba(54, 9, 105, 0.8)) );
+  background: -webkit-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
+  background: -o-linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
+  background: linear-gradient( rgba(54, 9, 105, 0.8), rgba(54, 9, 105, 0.8) );
 }
 .pricing div[class^="price"] ul {
   padding-left: 0px;
