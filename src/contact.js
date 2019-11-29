@@ -4,63 +4,7 @@ export default class Contact extends React.Component {
 render (){ 
     return(
 <div>
-{/* Required meta tags */}
-<meta charSet="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-{/* Bootstrap CSS */}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
-{/* bxslider */}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
-{/* google fonts */}
-<link href="https://fonts.googleapis.com/css?family=Dosis:200,500,700|Roboto:300,300i,400,400i,500,700,900" rel="stylesheet" />
-{/* fontawesome */}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossOrigin="anonymous" />
-{/* style.css */}
-<link rel="stylesheet" href="css/style.css" />
-<title>Subscription Box - Contact Us Page</title>
-{/*[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]*/}
-{/* HEADER with nav and slider */}
 <header>
-  {/* navigation */}
-  <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div className="container">
-      {/* LOGO */}
-      <a className="navbar-brand" href="index.html"><img src="images/logo.png" alt="header logo" /></a>
-      {/* mobile "order gift box"*/}
-      <div className="order button gradient d-lg-none d-xl-none">
-        <a href="#"><i className="fas fa-shopping-cart" />Order Gift Box</a>
-      </div>{/* /.order */}
-      {/* mobile menu toggle button */}
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="index.html">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="index.html#whatinside">What's Inside?</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="index.html#previousboxes">Previous Boxes</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="index.html#pricing">Pricing</a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-        {/* order button */}
-        <div className="order button gradient">
-          <a href="#"><i className="fas fa-shopping-cart" />Order Gift Box</a>
-        </div>{/* /.order */}
-      </div>{/* /.collapse */}
-    </div>{/* /.container */}
-  </nav>
   {/* CTA AREA */}
   <div className="cta-area" data-parallax="scroll" data-image-src="images/1600x644.png" data-speed="0.7">
     <div className="container">
