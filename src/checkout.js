@@ -12,6 +12,7 @@ export default class Checkout extends React.Component {
         degree: "",
   
         workexp: "No",
+        checked:false,
         college: "",
         branch: "",
         isHidden: false,
@@ -39,6 +40,16 @@ export default class Checkout extends React.Component {
     
   
     }
+    handleCheckboxChange = (event) =>
+    {
+    this.setState({ checked: event.target.checked })
+    
+    if(! event.target.checked )
+    document.getElementById('autoUpdate').style.display='block'
+    else
+    document.getElementById('autoUpdate').style.display ='none'
+    }
+
     checkout()
     {
             let options = {
@@ -135,11 +146,8 @@ export default class Checkout extends React.Component {
                           <div className="row">
                             {/*Grid column*/}
                             <div className="col-lg-4 col-md-12 mb-4">
-                              <label htmlFor="country">Country</label>
-                              <select className="custom-select d-block w-100" id="country" required>
-                                <option value>Choose...</option>
-                                <option>United States</option>
-                              </select>
+                               <input type="text" id="address-2" className="form-control" placeholder="Country Name" />
+                            <label htmlFor="address-2" className>Enter Your Country</label>
                               <div className="invalid-feedback">
                                 Please select a valid country.
                               </div>
@@ -147,11 +155,9 @@ export default class Checkout extends React.Component {
                             {/*Grid column*/}
                             {/*Grid column*/}
                             <div className="col-lg-4 col-md-6 mb-4">
-                              <label htmlFor="state">State</label>
-                              <select className="custom-select d-block w-100" id="state" required>
-                                <option value>Choose...</option>
-                                <option>California</option>
-                              </select>
+                            <label htmlFor="address-2" className>State</label>
+                            <input type="text" id="address-2" className="form-control"  required/>
+                            
                               <div className="invalid-feedback">
                                 Please provide a valid state.
                               </div>
@@ -171,7 +177,8 @@ export default class Checkout extends React.Component {
                           <hr />
                           <label htmlFor="address">Shipping Address</label>
                           <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" id="same-address" />
+                            <input type="checkbox" checked={this.state.checked}
+            onChange={(e)=>this.handleCheckboxChange(e)}  className="custom-control-input" id="same-address" />
                             <label className="custom-control-label" htmlFor="same-address">Shipping address is the same as my billing address</label>
                             <div id="autoUpdate">
                               {/*Grid row*/}
@@ -209,23 +216,19 @@ export default class Checkout extends React.Component {
                               <div className="row">
                                 {/*Grid column*/}
                                 <div className="col-lg-4 col-md-12 mb-4">
-                                  <label htmlFor="country">Country</label>
-                                  <select className="custom-select d-block w-100" id="country" required>
-                                    <option value>Choose...</option>
-                                    <option>United States</option>
-                                  </select>
-                                  <div className="invalid-feedback">
-                                    Please select a valid country.
-                                  </div>
+                                  <input type="text" id="address-2" className="form-control" placeholder="Country Name" />
+                            <label htmlFor="address-2" className>Enter Your Country</label>
+                              <div className="invalid-feedback">
+                                Please select a valid country.
+                              </div>
+                                  
                                 </div>
                                 {/*Grid column*/}
                                 {/*Grid column*/}
                                 <div className="col-lg-4 col-md-6 mb-4">
-                                  <label htmlFor="state">State</label>
-                                  <select className="custom-select d-block w-100" id="state" required>
-                                    <option value>Choose...</option>
-                                    <option>California</option>
-                                  </select>
+                                <label htmlFor="address-2" className>State</label>
+                            <input type="text" id="address-2" className="form-control"  required/>
+                      
                                   <div className="invalid-feedback">
                                     Please provide a valid state.
                                   </div>
@@ -247,54 +250,8 @@ export default class Checkout extends React.Component {
                             <input type="checkbox" className="custom-control-input" id="save-info" />
                             <label className="custom-control-label" htmlFor="save-info">Save this information for next time</label>
                           </div>
-                          <hr />
-                          <div className="d-block my-3">
-                            <div className="custom-control custom-radio">
-                              <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" defaultChecked required />
-                              <label className="custom-control-label" htmlFor="credit">Credit card</label>
-                            </div>
-                            <div className="custom-control custom-radio">
-                              <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required />
-                              <label className="custom-control-label" htmlFor="debit">Debit card</label>
-                            </div>
-                            <div className="custom-control custom-radio">
-                              <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required />
-                              <label className="custom-control-label" htmlFor="paypal">Paypal</label>
-                            </div>
-                          </div>
-                          <div className="row">
-                            <div className="col-md-6 mb-3">
-                              <label htmlFor="cc-name">Name on card</label>
-                              <input type="text" className="form-control" id="cc-name" placeholder required />
-                              <small className="text-muted">Full name as displayed on card</small>
-                              <div className="invalid-feedback">
-                                Name on card is required
-                              </div>
-                            </div>
-                            <div className="col-md-6 mb-3">
-                              <label htmlFor="cc-number">Credit card number</label>
-                              <input type="text" className="form-control" id="cc-number" placeholder required />
-                              <div className="invalid-feedback">
-                                Credit card number is required
-                              </div>
-                            </div>
-                          </div>
-                          <div className="row">
-                            <div className="col-md-3 mb-3">
-                              <label htmlFor="cc-expiration">Expiration</label>
-                              <input type="text" className="form-control" id="cc-expiration" placeholder required />
-                              <div className="invalid-feedback">
-                                Expiration date required
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <label htmlFor="cc-expiration">CVV</label>
-                              <input type="text" className="form-control" id="cc-cvv" placeholder required />
-                              <div className="invalid-feedback">
-                                Security code required
-                              </div>
-                            </div>
-                          </div>
+              
+                          
                           <hr className="mb-4" />
                           <button className="btn btn-primary btn-lg btn-block" id="pay"  onClick={()=>this.checkout()} type="submit">Continue to checkout</button>
                         </form>
