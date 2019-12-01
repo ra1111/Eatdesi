@@ -5,12 +5,25 @@ export default class Checkout extends React.Component {
       super();
       this.state = {
         //graduation details
-        address: "",
-        contact: 0,
-        name: "",
-         company: "", months: 0, role: "" ,
-        degree: "",
-  
+        
+        billfirst:"",
+        billsecond:"",
+        billemail:"",
+        billaddress:"",
+        billaddress2:"",
+        billcountry:"",
+        billcity:"",
+        billstate:"",
+        billzip:"",
+        shipfirst:"",
+        shipsecond:"",
+        shipemail:"",
+        shipaddress:"",
+        shipaddress2:"",
+        shipcountry:"",
+        shipstate:"",
+        shipzip:"",
+        shipcity:'',
         workexp: "No",
         checked:false,
         college: "",
@@ -49,7 +62,12 @@ export default class Checkout extends React.Component {
     else
     document.getElementById('autoUpdate').style.display ='none'
     }
-
+    handleChange =(evt)=> {
+      // check it out: we get the evt.target.name (which will be either "email" or "password")
+      // and use it to target the key on our `state` object with the same name, using bracket syntax
+      this.setState({ [evt.target.name]: evt.target.value });
+      console.log( evt.target.name, evt.target.value )
+    }
     checkout()
     {
             let options = {
@@ -104,8 +122,8 @@ export default class Checkout extends React.Component {
                             <div className="col-md-6 mb-2">
                               {/*firstName*/}
                               <div className="md-form ">
-                                <input type="text" id="firstName" className="form-control" />
-                                <label htmlFor="firstName" className>First name</label>
+                                <input name="billfirst" type="text" id="firstName" className="form-control" />
+                                <label htmlFor="firstName"  onChange={this.handleChange} className>First name</label>
                               </div>
                             </div>
                             {/*Grid column*/}
@@ -113,8 +131,8 @@ export default class Checkout extends React.Component {
                             <div className="col-md-6 mb-2">
                               {/*lastName*/}
                               <div className="md-form">
-                                <input type="text" id="lastName" className="form-control" />
-                                <label htmlFor="lastName" className>Last name</label>
+                                <input type="text" onChange={this.handleChange}  name="billsecond" id="lastName" className="form-control" />
+                                <label htmlFor="lastName"  className>Last name</label>
                               </div>
                             </div>
                             {/*Grid column*/}
@@ -129,44 +147,56 @@ export default class Checkout extends React.Component {
                           </div> */}
                           {/*email*/}
                           <div className="md-form mb-5">
-                            <input type="text" id="email" className="form-control" placeholder="youremail@example.com" />
+                            <input type="text" id="email" name="billemail" onChange={this.handleChange} className="form-control" placeholder="youremail@example.com" />
                             <label htmlFor="email" className>Email </label>
                           </div>
                           {/*address*/}
                           <div className="md-form mb-5">
-                            <input type="text" id="address" className="form-control" placeholder="1234 Main St" />
+                            <input type="text" id="address" name="billaddress" onChange={this.handleChange} className="form-control" placeholder="1234 Main St" />
                             <label htmlFor="address" className>Address</label>
                           </div>
                           {/*address-2*/}
                           <div className="md-form mb-5">
-                            <input type="text" id="address-2" className="form-control" placeholder="Apartment or suite" />
+                            <input type="text" id="address-2" name="billaddress2" onChange={this.handleChange} className="form-control" placeholder="Apartment or suite" />
                             <label htmlFor="address-2" className>Address 2 (optional)</label>
                           </div>
                           {/*Grid row*/}
-                          <div className="row">
-                            {/*Grid column*/}
-                            <div className="col-lg-4 col-md-12 mb-4">
-                               <input type="text" id="address-2" className="form-control" placeholder="Country Name" />
-                            <label htmlFor="address-2" className>Enter Your Country</label>
+                          <div className="row" style={{display:'flex',justifyContent:'space-around'}}>
+                          <div className="col-lg-4 col-md-12 mb-4">
+                            <label htmlFor="address-2" className> Country</label>
+                               <input type="text" id="address-2" name="billcountry" onChange={this.handleChange} className="form-control" placeholder="Country Name" />
+                       
                               <div className="invalid-feedback">
                                 Please select a valid country.
                               </div>
                             </div>
-                            {/*Grid column*/}
-                            {/*Grid column*/}
                             <div className="col-lg-4 col-md-6 mb-4">
                             <label htmlFor="address-2" className>State</label>
-                            <input type="text" id="address-2" className="form-control"  required/>
+                            <input type="text" id="address-2" name="billstate" onChange={this.handleChange} className="form-control"  required/>
                             
                               <div className="invalid-feedback">
                                 Please provide a valid state.
                               </div>
                             </div>
+                            </div>
+                          <div className="row" style={{display:'flex',justifyContent:'space-around'}}>
+                            {/*Grid column*/}
+                           
+                            {/*Grid column*/}
+                            {/*Grid column*/}
+                           
                             {/*Grid column*/}
                             {/*Grid column*/}
                             <div className="col-lg-4 col-md-6 mb-4">
+                              <label htmlFor="zip">City</label>
+                              <input type="text" name="billcity" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
+                              <div className="invalid-feedback">
+                                Name of required.
+                              </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 mb-4">
                               <label htmlFor="zip">Zip</label>
-                              <input type="text" className="form-control" id="zip" placeholder required />
+                              <input type="text" name="billzip" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
                               <div className="invalid-feedback">
                                 Zip code required.
                               </div>
@@ -187,8 +217,8 @@ export default class Checkout extends React.Component {
                                 <div className="col-md-6 mb-2">
                                   {/*firstName*/}
                                   <div className="md-form ">
-                                    <input type="text" id="firstName" className="form-control" />
-                                    <label htmlFor="firstName" className>First name</label>
+                                    <input type="text" name ="shipfirst"onChange={this.handleChange} id="firstName" className="form-control" />
+                                    <label htmlFor="firstName"  className>First name</label>
                                   </div>
                                 </div>
                                 {/*Grid column*/}
@@ -196,7 +226,7 @@ export default class Checkout extends React.Component {
                                 <div className="col-md-6 mb-2">
                                   {/*lastName*/}
                                   <div className="md-form">
-                                    <input type="text" id="lastName" className="form-control" />
+                                    <input type="text" name='shipsecond' onChange={this.handleChange} id="lastName" className="form-control" />
                                     <label htmlFor="lastName" className>Last name</label>
                                   </div>
                                 </div>
@@ -204,40 +234,53 @@ export default class Checkout extends React.Component {
                               </div>
                               {/*address*/}
                               <div className="md-form mb-5">
-                                <input type="text" id="address" className="form-control" placeholder="1234 Main St" />
+                                <input type="text" id="address"  onChange={this.handleChange} name="shipaddress" className="form-control" placeholder="1234 Main St" />
                                 <label htmlFor="address" className>Address</label>
                               </div>
                               {/*address-2*/}
                               <div className="md-form mb-5">
-                                <input type="text" id="address-2" className="form-control" placeholder="Apartment or suite" />
+                                <input type="text" id="address-2" name="shipaddress2" onChange={this.handleChange} className="form-control" placeholder="Apartment or suite" />
                                 <label htmlFor="address-2" className>Address 2 (optional)</label>
                               </div>
-                              {/*Grid row*/}
-                              <div className="row">
-                                {/*Grid column*/}
-                                <div className="col-lg-4 col-md-12 mb-4">
-                                  <input type="text" id="address-2" className="form-control" placeholder="Country Name" />
-                            <label htmlFor="address-2" className>Enter Your Country</label>
+                              <div className="row"  style={{display:'flex',justifyContent:'space-around'}}>
+                              <div className="col-lg-4 col-md-12 mb-4">
+                                <label htmlFor="address-2" className>Enter Your Country</label>
+                                  <input type="text" id="address-2" name="shipcountry" onChange={this.handleChange} className="form-control" placeholder="Country Name" />
+                            
                               <div className="invalid-feedback">
                                 Please select a valid country.
                               </div>
+
                                   
                                 </div>
-                                {/*Grid column*/}
-                                {/*Grid column*/}
                                 <div className="col-lg-4 col-md-6 mb-4">
                                 <label htmlFor="address-2" className>State</label>
-                            <input type="text" id="address-2" className="form-control"  required/>
+                            <input type="text" id="address-2" name="shipstate" onChange={this.handleChange} className="form-control"  required/>
                       
                                   <div className="invalid-feedback">
                                     Please provide a valid state.
                                   </div>
                                 </div>
+                                </div>
+                              {/*Grid row*/}
+                              <div className="row"  style={{display:'flex',justifyContent:'space-around'}}>
+                                {/*Grid column*/}
+                             
+                                {/*Grid column*/}
+                                {/*Grid column*/}
+                               
+                                <div className="col-lg-4 col-md-6 mb-4">
+                              <label htmlFor="zip">City</label>
+                              <input type="text" name="billcity" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
+                              <div className="invalid-feedback">
+                                Name of required.
+                              </div>
+                            </div>
                                 {/*Grid column*/}
                                 {/*Grid column*/}
                                 <div className="col-lg-4 col-md-6 mb-4">
                                   <label htmlFor="zip">Zip</label>
-                                  <input type="text" className="form-control" id="zip" placeholder required />
+                                  <input type="text"  name="shipzip" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
                                   <div className="invalid-feedback">
                                     Zip code required.
                                   </div>
