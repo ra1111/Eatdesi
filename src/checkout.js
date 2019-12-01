@@ -94,11 +94,11 @@ export default class Checkout extends React.Component {
             {/* Required meta tags */}
             
             {/* PRELOADER */}
-            {/* <div id="loader-wrapper">
+            <div id="loader-wrapper">
               <div id="loader" />
               <div className="loader-section section-left" />
               <div className="loader-section section-right" />
-            </div> */}
+            </div>
             {/* HEADER with nav and slider */}
            
               {/* navigation */}
