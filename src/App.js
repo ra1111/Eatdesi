@@ -58,7 +58,7 @@ class App extends Component {
     });
 
     function autoPlayVideo(divVideoId, vcode, width, height){
-      "use strict";
+     
       $('#' + divVideoId).html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
     }
 
