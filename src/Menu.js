@@ -41,9 +41,6 @@ const Menu = () =>{
           </div>{/* /.collapse */}
         </div>{/* /.container */}
       </nav>
-      {/* slider */}
-      <div className="image-header" data-parallax="scroll" data-speed="0.7">
-        <div className="overlay-effect" />
-      </div>{/* /.image-header*/}
+    
     </header>)}
     export default Menu

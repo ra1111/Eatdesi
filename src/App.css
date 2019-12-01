@@ -1,25 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
 
 /* GENERAL STYLES */
 
@@ -31,11 +9,7 @@ body {
   line-height: 22px;
   overflow-x: hidden;
 }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-}
+
 .subs{
   display: flex;
   justify-content: center;
@@ -616,7 +590,7 @@ header .bxslider {
 }
 
 /* HOMEPAGE HERO IMAGE */
-.homepage1 header {
+ header {
   background: none;
 }
 .image-header {
@@ -639,7 +613,7 @@ header .bxslider {
   overflow:hidden;
 }
 
-.homepage1 header::after {
+ header::after {
   position: absolute;
   content: '';
   background-size: contain !important;
@@ -650,7 +624,7 @@ header .bxslider {
   z-index: 1;
   background: url('./images/wave-header.png')top no-repeat;
 }
-.homepage1 .how-it-works, .aboutus .how-it-works {
+ .how-it-works, .aboutus .how-it-works {
   padding-top: 0px;
 }
 .homepage2 .how-it-works {
@@ -842,15 +816,15 @@ video {
   z-index: 2;
   background: rgba(255, 255, 255, 0.7)
 }
-.homepage1 .call-to-action .row > div {
+ .call-to-action .row > div {
   background: none;
   text-align: center;
   color:#fff;
 }
-.homepage1 .call-to-action .button {
+ .call-to-action .button {
   margin: 20px auto;
 }
-.homepage1 .call-to-action h2 {
+ .call-to-action h2 {
   color:#fff;
   font-size: 93px;
 }
@@ -970,7 +944,7 @@ transition: all .3s ease 0s;
   font-weight: 500;
   margin: 65px 0 5px 0;
 }
-.step.one h4, .step.two h4, .step.three h4, {
+.step.one h4, .step.two h4, .step.three h4{
   margin: 15px 0 5px 0!important;
 }
 
@@ -2406,7 +2380,7 @@ padding: 100px 10px 10px 10px;
 
 /* RESPONSIVE */
 @media (min-width: 1776px) {  
-  .homepage1 .how-it-works, .aboutus .how-it-works {
+   .how-it-works, .aboutus .how-it-works {
     padding-top: 50px;
   }
 }
@@ -2456,10 +2430,10 @@ padding: 100px 10px 10px 10px;
     background-size: 95%;
     width: 70%;
   }
-  .homepage1 header::after {
+   header::after {
     bottom: -59%
   }
-  .homepage1 .call-to-action {
+   .call-to-action {
     margin-top: -50px;
   }
 }
@@ -2496,7 +2470,7 @@ padding: 100px 10px 10px 10px;
   .homepage2 .call-to-action .row > div {
     margin-top: -40%
   }
-  .homepage1 .call-to-action .row > div {
+   .call-to-action .row > div {
     margin-top: -55%;
   }
   .nav-link {
@@ -2525,10 +2499,10 @@ padding: 100px 10px 10px 10px;
   .innerpage .cta-area i {
     padding-top: 45%;
   }
-  .homepage1 .call-to-action .row > div {
+   .call-to-action .row > div {
     margin-top: -65%;
   } 
-  .homepage1 header::after {
+   header::after {
     bottom: -65%
   }
   .navbar-light .navbar-brand {
@@ -2723,7 +2697,7 @@ padding: 100px 10px 10px 10px;
     padding-top: 3px;
     height: 100px;
   }
-  .homepage1 .call-to-action .row > div {
+   .call-to-action .row > div {
     margin-top: -80%;
   } 
   .remaining-time h3 {
@@ -2775,7 +2749,7 @@ padding: 100px 10px 10px 10px;
   .step p {
     padding: 0px;
   }
-  .homepage .step h4, .homepage1 .step h4, .homepage2 .step h4 {
+  .homepage .step h4,  .step h4, .homepage2 .step h4 {
     font-size: 15px;
   }
   .call-to-action .row > div {
@@ -2832,7 +2806,7 @@ padding: 100px 10px 10px 10px;
   .press .logo {
     padding-right: 0px;
   }
-  .homepage1 section.call-to-action h3 {
+   section.call-to-action h3 {
     text-align: center; 
   }
   .facts-content{
@@ -2846,13 +2820,13 @@ padding: 100px 10px 10px 10px;
   }
 }
 @media (max-width: 680px) {  
-  .homepage1 header::after{
+   header::after{
    bottom: -68%
   }
-  .homepage1 .call-to-action {
+   .call-to-action {
     margin-top: -150px;
   }
-  .homepage.homepage1 .how-it-works {
+  .homepage .how-it-works {
     padding: 100px 10px 100px 10px;
   }
 }
@@ -2873,11 +2847,11 @@ padding: 100px 10px 10px 10px;
   .sidebar {
     padding-left: 0px;
   }
-  .homepage1 .call-to-action .row > div {
+  .call-to-action .row > div {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .homepage1 header::after{
+  header::after{
     bottom: -70%
    }
   .press .logo {
@@ -2957,16 +2931,16 @@ padding: 100px 10px 10px 10px;
   .in-the-box .feature i {
     left: 45%;
   }
-  .homepage1 .call-to-action h2 {
+  .call-to-action h2 {
     color: #fff;
     font-size: 63px;}
 
 }
 @media (max-width: 507px) { 
-  .homepage1 header::after {
+  header::after {
     background: none
   }
-  .homepage.homepage1 .how-it-works {
+  .homepage.how-it-works {
     padding: 150px 10px 100px 10px; 
 }
 }

@@ -1,10 +1,17 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
+import './App.css'
 const Home = () => {
     return (
     <div>
  <div>
-    
+      {/* slider */}
+      <header>
+      <div className="image-header" data-parallax="scroll" data-speed="0.7">
+        <div className="overlay-effect" />
+        
+      </div>{/* /.image-header*/}
+      </header>
         {/* CALL TO ACTION AREA */}
         <section className="call-to-action container">
           <div className="row">

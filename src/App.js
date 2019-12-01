@@ -34,7 +34,7 @@ class App extends Component {
       $( "li.active" ).removeClass( "active" );
       $(this).parent().addClass('active');
 
-      $("html, body").animate({ scrollTop: 0 }, "slow");
+   
      
       
     });
