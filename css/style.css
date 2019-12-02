@@ -617,6 +617,9 @@ header .bxslider {
   background-color: rgba(55, 5, 81, 0.85);
   overflow:hidden;
 }
+.bg-light{
+  background-color: white !important;
+}
 
 .homepage1 header::after {
   position: absolute;

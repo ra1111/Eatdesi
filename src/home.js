@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 import './App.css'
+
+let imgUrl = './images/info.jpg'
 const Home = () => {
     return (
     <div>
@@ -26,7 +29,7 @@ const Home = () => {
                 <i className="fas fa-star" />
                 <span>1770 reviews</span>
               </p>
-              <div className="order button gradient">
+              <div className="order button gradient"style={{ margin:'20px auto'}}>
                 <Link href="/#pricing">Subscribe Now</Link>
               </div>{/* /.order */}
             </div>
@@ -76,7 +79,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-5 col-lg-5 col-xl-5 col-sm-12">
-                <img src="images/info.jpg" alt="hero 3" />
+                <img src={require("./images/info.jpg")} alt="hero 3" />
               </div>{/*/.col-7*/}
               <div className="col-md-7 col-lg-7 col-xl-7 col-sm-12">
                 <h3>What's Inside the Box?</h3>
@@ -154,7 +157,7 @@ const Home = () => {
               </div>{/* /.col*/}
             </div>{/* /.row */}
             <div className="row subs">
-              <div className="col-xl-4 col-lg-4 col-md-6 box-container" data-aos="fade-up" data-aos-duration={400} data-aos-once="true">
+              <div className="col-xl-4 col-lg-4 col-md-6 box-container">
                 <div className="price-2"> 
                   <i className="price">$299</i>
                   <h5>Yearly Subscription Box</h5>
@@ -191,28 +194,28 @@ const Home = () => {
               <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                 <div className="facts-content">
                   <i className="fas fa-box-open" />
-                  <h3 className="timer count-title count-number" data-to={320} data-speed={1500} />
+                  <h3 className="timer count-title count-number" data-to={320} data-speed={1500} > 900 </h3>
                   <p>boxes delivered</p>
                 </div>{/* /.facts-content */}
               </div>
               <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                 <div className="facts-content">
                   <i className="fas fa-undo-alt" />
-                  <h3 className="timer count-title count-number" data-to={2} data-speed={1500} />
+                  <h3 className="timer count-title count-number" data-to={2} data-speed={1500} >2</h3>
                   <p>boxes returned</p>
                 </div>{/* /.facts-content */}
               </div>
               <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                 <div className="facts-content">
                   <i className="fas fa-smile" />
-                  <h3 className="timer count-title count-number" data-to={731} data-speed={1500} />
+                  <h3 className="timer count-title count-number" data-to={731} data-speed={1500} >731</h3>
                   <p>happy clients</p>
                 </div>{/* /.facts-content */}
               </div>
               <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                 <div className="facts-content">
                   <i className="fas fa-briefcase-medical" />
-                  <h3 className="timer count-title count-number" data-to={0} data-speed={1500} />
+                  <h3 className="timer count-title count-number" data-to={0} data-speed={1500} > 0 </h3> 
                   <p>health problems</p>
                 </div>{/* /.facts-content */}
               </div>
@@ -251,13 +254,16 @@ const Home = () => {
     </section> */}
         {/* SUBSCRIBE */}
         <section className="subscribe">
-          <div className="bgimg" data-parallax="scroll" data-image-src="images/triangles.jpg" data-speed="0.7">
+          <div className="bgimg" data-parallax="scroll"  style={{backgroundImage: 'url(' + imgUrl + ')', 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',}} data-speed="0.7">
             <div className="container">
               <div className="subscribe-area">
                 <div className="row">
                   <div className="col-12 subscribe-text">
                     <h3>Subscribe to our newsletter</h3>
-                    <p className="section-description">and get 20% off from your next cheesebox subscription</p>
+                    <p className="section-description">and get 20% off from your next subscription</p>
                   </div>{/* /.col*/}
                   <div className="col-12">
                     <form>
@@ -300,7 +306,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-12">
-                <img src="images/logo-footer.png" className="logo" alt="logo footer" />
+                <img src={require("./images/logo-footer.png")} className="logo" alt="logo footer" />
                 <ul className="contact row">
                   <li className="col"><i className="fas fa-map-marker-alt" />Magadh University, Bodhgaya 11, 824234 <br /> India</li>
                   <li className="col"><i className="fas fa-mobile-alt" /><strong>Get In Touch: </strong><br />mail.eatdesi@gmail.com</li>

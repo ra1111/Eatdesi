@@ -4,7 +4,7 @@ export default class Contact extends React.Component {
 render (){ 
     return(
 <div>
-<header>
+
   {/* CTA AREA */}
   <div className="cta-area" data-parallax="scroll" data-image-src="images/1600x644.png" data-speed="0.7">
     <div className="container">
@@ -52,7 +52,7 @@ render (){
       </div>{/* /.row */}
     </div>{/* /.container */}
   </div>{/*/.cta-area*/}
-</header>
+
 <section className="blog-content">
   <div className="container">
     <div className="row">

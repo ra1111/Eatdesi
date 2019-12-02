@@ -44,10 +44,10 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-.homepage section h3 {
+ section h3 {
   margin-top: 100px;
 }
-.homepage section.call-to-action h3 {
+ section.call-to-action h3 {
   margin-top: 20px;
 }
 strong {
@@ -405,7 +405,7 @@ img.notfull {
 .container.slider-container {
   margin-right: 0px;
 }
-.homepage header {
+ header {
   background:url(./images/header-bg.png) no-repeat top right;
 }
 header .bxslider {
@@ -460,7 +460,7 @@ header .bxslider {
   padding-top: 0px;
 }
 .bg-light {
-  background-color: rgba(255, 255, 255, 0.7)!important;
+  background-color: rgba(255, 255, 255)!important;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.8);
@@ -627,7 +627,7 @@ header .bxslider {
  .how-it-works, .aboutus .how-it-works {
   padding-top: 0px;
 }
-.homepage2 .how-it-works {
+.how-it-works {
   padding-top: 50px;
 }
 .video-header {
@@ -651,37 +651,6 @@ video {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.homepage .call-to-action .row > div {
- padding: 30px 20px;
-  height: 60%;;
-}
-.homepage2 .call-to-action .row > div {
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
-  -ms-box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
-  -o-box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
- 
-  position: relative;
-  padding: 50px;
-  text-align: center;
-  z-index: 2;
-  border-radius: 0px 0px 7px 7px;
-}
-.homepage2 .call-to-action .row > div > i {
-  color: #e0413d;
-  -webkit-box-shadow: 0px -9px 15px -10px rgba(0,0,0,0.5);
-  box-shadow: 0px -9px 15px -10px rgba(0,0,0,0.5);
-  padding: 20px;
-  border-radius: 50%;
-  position: absolute;
-  top: -20px;
-  background: #fff;
-  left: 47%;
-}
-.homepage2 .call-to-action .button{
-  margin: 20px auto;
 }
 /* GRADIENT BUTTON */
 .button {
@@ -948,7 +917,7 @@ transition: all .3s ease 0s;
   margin: 15px 0 5px 0!important;
 }
 
-.homepage .step h4 {
+ .step h4 {
   font-size: 17px;
   margin: 25px 0 5px 0;
 }
@@ -960,7 +929,7 @@ transition: all .3s ease 0s;
 .step p {
   padding: 0 40px;
 }
-.homepage .step.one p:after, .aboutus .how-it-works .step.one p:after {
+ .step.one p:after, .aboutus .how-it-works .step.one p:after {
   background: url(./images/arrow-1.png) no-repeat rgba(0,0,0,0);
   content: "";
   height: 80px;
@@ -970,7 +939,7 @@ transition: all .3s ease 0s;
   left: 75%;
   top: 85px;
 }
-.homepage .step.two p::after, .aboutus .how-it-works .step.two p:after {
+ .step.two p::after, .aboutus .how-it-works .step.two p:after {
   background: url(./images/arrow-2.png) no-repeat rgba(0,0,0,0);
   content: "";
   height: 80px;
@@ -1100,7 +1069,7 @@ left: 44%;
   z-index: 1;
   background: url('./images/wave-right.png')top no-repeat;
 }
-.homepage #next-box-countdown {
+ #next-box-countdown {
   font-size: 90px;
   color:#fff;
   text-align: center;
@@ -1108,7 +1077,7 @@ left: 44%;
   margin-left: 10%;
 }
 
-.homepage #next-box-countdown span {
+ #next-box-countdown span {
   background-color: #e0413d;
   color:#fff;
   text-transform: uppercase;
@@ -1122,12 +1091,12 @@ left: 44%;
   text-align: center
 }
 .next-box .container .row > div {}
-.homepage #next-box-countdown > div {
+ #next-box-countdown > div {
   width: 100px;
   float: left;
 
 }
-.homepage #next-box-countdown div {
+ #next-box-countdown div {
   width:170px;
   text-align: center
 }
@@ -1359,11 +1328,11 @@ margin-top: -200px;
   background: transparent;
   
 }
-.homepage .subscribe .bgimg {
+ .subscribe .bgimg {
   min-height: 400px;
 }
 
-.homepage .subscribe {
+ .subscribe {
   padding-bottom: 20px;
   margin-top: 0px;
 }
@@ -2388,7 +2357,7 @@ padding: 100px 10px 10px 10px;
   footer > div.container {
     padding-top: 0px;
   }
-  .homepage section h3 {
+   section h3 {
     margin-top: 100px;
   }
 }
@@ -2426,7 +2395,7 @@ padding: 100px 10px 10px 10px;
   footer .contact {
     font-size: 13px;
   }
-  .homepage .step.one p::after, .homepage .step.two p::after {
+   .step.one p::after,  .step.two p::after {
     background-size: 95%;
     width: 70%;
   }
@@ -2438,10 +2407,7 @@ padding: 100px 10px 10px 10px;
   }
 }
 @media (max-width: 1090px) {
-  .homepage2 .call-to-action .row >div.col-lg-6 {
-    flex: 0 0 70%!important;
-    width: 90%;
-  }
+
   .navbar-brand {
     margin-right: .5em;
     
@@ -2449,13 +2415,13 @@ padding: 100px 10px 10px 10px;
   .navbar-light .navbar-brand {
     width: 20%;
   }
-  .homepage #next-box-countdown div {
+   #next-box-countdown div {
     width: 150px;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     font-size: 70px;
   }
-  .homepage #next-box-countdown span {
+   #next-box-countdown span {
     width: 100px;
     font-size: 15px;
   }
@@ -2467,16 +2433,14 @@ padding: 100px 10px 10px 10px;
    
     height: 60%;;
   }
-  .homepage2 .call-to-action .row > div {
-    margin-top: -40%
-  }
+
    .call-to-action .row > div {
     margin-top: -55%;
   }
   .nav-link {
     padding: .65rem 1rem .5rem 1rem;
   }
-  .homepage .how-it-works {
+   .how-it-works {
     padding: 0px 10px 100px 10px
   }
   .section-description {
@@ -2485,14 +2449,12 @@ padding: 100px 10px 10px 10px;
   .in-the-box .feature i {
     left: 40%;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     margin-left: 8%;
   }
 }
 @media (max-width: 991px) {
-  .homepage2 .call-to-action h2 {
-    font-size: 55px;
-  }
+ 
   .innerpage .step {
     padding-top: 35px;
   }
@@ -2540,7 +2502,7 @@ padding: 100px 10px 10px 10px;
   .navbar.shrink .button {
     top:10px;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     margin-left: auto;
     margin-right: auto
   } 
@@ -2593,11 +2555,11 @@ padding: 100px 10px 10px 10px;
   .unboxing {
     padding-bottom: 20px;
   }
-  .homepage #next-box-countdown span {
+   #next-box-countdown span {
     width: 80px;
     font-size: 13px;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     font-size: 60px;
   }
   footer::after {
@@ -2606,7 +2568,7 @@ padding: 100px 10px 10px 10px;
   .call-to-action-middle .row > div {
     padding: 40px;
   }
-  .homepage #next-box-countdown div {
+   #next-box-countdown div {
     width: 30%;
     margin-left: 10px;
   }
@@ -2687,7 +2649,7 @@ padding: 100px 10px 10px 10px;
   }
 }
 @media (max-width: 768px) { 
-  .homepage2 section.call-to-action h3 {
+  2 section.call-to-action h3 {
     text-align: center
   }
   .innerpage .step{
@@ -2726,10 +2688,10 @@ padding: 100px 10px 10px 10px;
     line-height: 28px;
     font-size: 20px;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     font-size: 70px;
   }
-  .homepage #next-box-countdown span {
+   #next-box-countdown span {
     width: 100px;
     font-size: 15px;
   }
@@ -2749,9 +2711,7 @@ padding: 100px 10px 10px 10px;
   .step p {
     padding: 0px;
   }
-  .homepage .step h4,  .step h4, .homepage2 .step h4 {
-    font-size: 15px;
-  }
+
   .call-to-action .row > div {
     margin-top: -85%
   }
@@ -2776,7 +2736,7 @@ padding: 100px 10px 10px 10px;
   footer::after {
     top: -150px;
   }
-  .homepage section h3 {
+   section h3 {
     margin-top: 70px;
   }
   .press {
@@ -2826,12 +2786,12 @@ padding: 100px 10px 10px 10px;
    .call-to-action {
     margin-top: -150px;
   }
-  .homepage .how-it-works {
+   .how-it-works {
     padding: 100px 10px 100px 10px;
   }
 }
 @media (max-width: 576px) { 
-  .homepage2 .call-to-action {
+  2 .call-to-action {
     margin-top: 40%;
   }
   
@@ -2881,13 +2841,13 @@ padding: 100px 10px 10px 10px;
   .call-to-action .row > div {
     margin-top: -90%;
   }
-  .homepage .step.one p::after, .homepage .step.two p::after {
+   .step.one p::after,  .step.two p::after {
     background: none;
     content: "";
     position: initial;
 
   }
-  .homepage .step h4 {
+   .step h4 {
     font-size: 17px;
   }
   .previous-box #bx-pager li {
@@ -2940,13 +2900,13 @@ padding: 100px 10px 10px 10px;
   header::after {
     background: none
   }
-  .homepage.how-it-works {
+  .how-it-works {
     padding: 150px 10px 100px 10px; 
 }
 }
 @media (max-width: 480px) { 
   
-  .homepage section h3 {
+   section h3 {
     margin-top: 40px;
   }
   h3 {
@@ -3045,10 +3005,10 @@ padding: 100px 10px 10px 10px;
 }
 
 @media (max-width: 430px) {  
-  .homepage2 .call-to-action h2 {
+  2 .call-to-action h2 {
     font-size: 40px;
   }
-  .homepage2 .call-to-action .row > div {
+  2 .call-to-action .row > div {
     margin-top: -100px;
   }
   .previous-box #bx-pager {
@@ -3083,10 +3043,10 @@ padding: 100px 10px 10px 10px;
   .call-to-action h3 {
     font-size: 16px;
   }
-  .homepage #next-box-countdown {
+   #next-box-countdown {
     font-size: 50px;
   }
-  .homepage #next-box-countdown span {
+   #next-box-countdown span {
     width: 70px;
     font-size: 12px;
   }
@@ -3096,16 +3056,16 @@ padding: 100px 10px 10px 10px;
     font-size: 30px;
     line-height: 40px;
   }
-  .homepage #next-box-countdown div{
+   #next-box-countdown div{
     width: 25%;
   }
 }
 @media (max-width: 991px)
 {
-.extra-info .facts-content {
+  .facts-content{
     margin-bottom: 50px;
 }
-.extra-info .facts-content {
+.facts-content {
     background: #fff;
     padding: 50px 15px;
     text-align: center;
@@ -3125,7 +3085,7 @@ padding: 100px 10px 10px 10px;
   color: #e0413d;
   height: auto;
 }
-.extra-info .facts-content h3 {
+ .facts-content h3 {
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 10px;
@@ -3133,4 +3093,14 @@ padding: 100px 10px 10px 10px;
   font-weight: 500;
   float: none;
   display: inline;
+}
+.facts-content {
+  background: #fff;
+  padding: 50px 15px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+  -ms-box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+  -o-box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+  border-radius: 0 0 7px 7px;
 }
