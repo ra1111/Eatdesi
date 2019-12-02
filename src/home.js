@@ -306,7 +306,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-12">
-                <img src={require("./images/logo-footer.png")} className="logo" alt="logo footer" />
+              
                 <ul className="contact row">
                   <li className="col"><i className="fas fa-map-marker-alt" />Magadh University, Bodhgaya 11, 824234 <br /> India</li>
                   <li className="col"><i className="fas fa-mobile-alt" /><strong>Get In Touch: </strong><br />mail.eatdesi@gmail.com</li>
