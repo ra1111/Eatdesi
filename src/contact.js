@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './App.css';
+import BackgroundImage from './images/triangles.jpg'
 export default class Contact extends React.Component {
+  
 render (){ 
     return(
 <div>
@@ -44,7 +46,7 @@ render (){
           <div className="remaining-time">
             <h3>Remaining Time</h3>
             <p>until the next box is being delivered</p>
-            <div id="next-box-countdown" className="clearfix">
+            <div id="next-box-countdown" style={{color:'#e0413d',fontSize:'25px',fontWeight:'300'}} className="clearfix">
               <div>90 <span>days</span></div><div> 20 <span>hours</span></div> <div>00 <span>minutes</span></div>
             </div>{/*/#next-box-countdown*/}
           </div>{/* /. remaining-time*/}
@@ -61,10 +63,10 @@ render (){
         <h3>Contact Us</h3>
       </div>{/* /.col-12 */}
     </div>{/* /.row */}
-    <div className="row">
+    <div className="row" style={{justifyContent:'center'}}>
       {/* CONTACT DETAILS */}
       <div className="col-6">
-        <h5>Send Us a Message</h5>
+       
         <form method="post" action="contact.php" id="contact-form" role="form">
           <div className="messages" />
           <div className="form-group">
@@ -93,15 +95,15 @@ render (){
         </form>
       </div>{/* /.col-6 */}
       {/* THE MAP */}
-      <div className="col-6">
-        <h5>Find Us on Map</h5>
-        <div id="map" />
-      </div>{/* /.col-6 END OF MAP */}
+     
     </div>{/* /.row */}
   </div>{/* /.container */}
 </section>{/* /.blog-content*/}
 {/* SUBSCRIBE */}
-<section className="subscribe">
+<section className="subscribe" style={{backgroundImage: `url(${BackgroundImage})`, 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',}}>
   <div className="bgimg" data-parallax="scroll" data-image-src="images/triangles.jpg" data-speed="0.7">
     <div className="container">
       <div className="subscribe-area">

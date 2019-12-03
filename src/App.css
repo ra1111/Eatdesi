@@ -779,7 +779,7 @@ video {
   border-radius: 0px 0px 7px 7px;
 }
 .call-to-action .row > div {
-  margin-top: -50%;
+  margin-top: -45%;
   position: relative;
   text-align:left;
   z-index: 2;
@@ -1070,8 +1070,8 @@ left: 44%;
   background: url('./images/wave-right.png')top no-repeat;
 }
  #next-box-countdown {
-  font-size: 90px;
-  color:#fff;
+  font-size: 30px;
+  color:#000;
   text-align: center;
   font-weight: 300;
   margin-left: 10%;
@@ -1317,7 +1317,7 @@ margin-top: -200px;
 }
 /* SUBSCRIBE */
 .subscribe {
-   z-index: 10;
+   z-index: -1;
   position: relative;
   height: 600px;
   overflow: hidden; 
@@ -1662,6 +1662,7 @@ footer .contact a:hover, footer .widgets a:hover {
 .remaining-time {
   text-align: center;
 background: #fff;
+width:140%;
 color: #474747;
 padding: 40px 20px;
 -webkit-box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
@@ -1699,7 +1700,7 @@ font-size: 20px;
 }
 /* BLOGPAGE */
 
-.innerpage .cta-area{
+.cta-area{
   background:-webkit-gradient( linear, left top, left bottom, from(rgba(215, 52, 100, 0.8)), to(rgba(54, 9, 105, 0.8)) );
   background:-webkit-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) );
   background:-o-linear-gradient( rgba(215, 52, 100, 0.8), rgba(54, 9, 105, 0.8) );
@@ -1710,7 +1711,7 @@ font-size: 20px;
   margin-bottom: 100px;
 }
 
-.innerpage .cta-area i {
+.cta-area i {
   font-size: 18px;
 padding-right: 20px;
 float: left;
@@ -1718,14 +1719,16 @@ width: 40px;
 height: 200px;
 padding-top: 30%;
 }
-.innerpage .step p {
+.step p {
   padding-left: 0px;
   padding-right: 0px;
 font-size: 13px;
 line-height: 18px;
 }
 
-
+.clearfix-home{
+  font-size:60px !important; 
+}
 .blog-post {
   -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
 
@@ -2419,7 +2422,7 @@ padding: 100px 10px 10px 10px;
     width: 150px;
   }
    #next-box-countdown {
-    font-size: 70px;
+    font-size: 30px;
   }
    #next-box-countdown span {
     width: 100px;
@@ -2462,7 +2465,7 @@ padding: 100px 10px 10px 10px;
     padding-top: 45%;
   }
    .call-to-action .row > div {
-    margin-top: -65%;
+    margin-top: -58%;
   } 
    header::after {
     bottom: -65%
@@ -2560,7 +2563,7 @@ padding: 100px 10px 10px 10px;
     font-size: 13px;
   }
    #next-box-countdown {
-    font-size: 60px;
+    font-size: 30px;
   }
   footer::after {
     top:-203px;
@@ -2689,7 +2692,7 @@ padding: 100px 10px 10px 10px;
     font-size: 20px;
   }
    #next-box-countdown {
-    font-size: 70px;
+    font-size: 30px;
   }
    #next-box-countdown span {
     width: 100px;
@@ -3044,7 +3047,7 @@ padding: 100px 10px 10px 10px;
     font-size: 16px;
   }
    #next-box-countdown {
-    font-size: 50px;
+    font-size: 30px;
   }
    #next-box-countdown span {
     width: 70px;

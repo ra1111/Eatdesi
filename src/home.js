@@ -2,8 +2,9 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 import './App.css'
+import BackgroundImage from './images/triangles.jpg'
 
-let imgUrl = './images/info.jpg'
+let imgUrl = './images/traingles.jpg'
 const Home = () => {
     return (
     <div>
@@ -126,7 +127,7 @@ const Home = () => {
             <div className="row justify-content-center">
               <div className="col-lg-7 col-xl-7 col-md-10">
                 <h5>Time Until Next Shipment:</h5>
-                <div id="next-box-countdown" className="clearfix">
+                <div id="next-box-countdown" className="clearfix-home">
                   <div>90 <span>days</span></div><div> 20 <span>hours</span></div> <div>00 <span>minutes</span></div>
                 </div>{/*/#next-box-countdown*/}
                 {/* /. remaining-time*/}
@@ -149,7 +150,7 @@ const Home = () => {
         {/* PREVIOUS BOXES */}
         {/* PRICING */}
         <section className="pricing" id="pricing">
-          <div className="container">
+          <div className="container" style={{ backgroundImage: `url(${"./images/info.jpg"})` }}>
             <div className="row justify-content-center">
               <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12">
                 <h3>Great Value In Every Box</h3>
@@ -253,11 +254,11 @@ const Home = () => {
         </div>
     </section> */}
         {/* SUBSCRIBE */}
-        <section className="subscribe">
-          <div className="bgimg" data-parallax="scroll"  style={{backgroundImage: 'url(' + imgUrl + ')', 
+        <section className="subscribe" style={{backgroundImage: `url(${BackgroundImage})`, 
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat',}} data-speed="0.7">
+                backgroundRepeat: 'no-repeat',}}>
+          <div className="bgimg" data-parallax="scroll"   data-speed="0.7">
             <div className="container">
               <div className="subscribe-area">
                 <div className="row">
