@@ -161,7 +161,7 @@ const Home = () => {
               <div className="col-xl-4 col-lg-4 col-md-6 box-container">
                 <div className="price-2"> 
                   <i className="price">$299</i>
-                  <h5>Yearly Subscription Box</h5>
+                  <h5>Half Yearly Subscription Box</h5>
                   <ul>
                     <li>10-14 snacks per box</li>
                     <li>Free shipping worldwide</li>

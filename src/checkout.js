@@ -41,11 +41,13 @@ export default class Checkout extends React.Component {
     //   this._onSelect = this._onSelect.bind(this);
     //   this.handleValidation=this.handleValidation.bind(this);
     //   this.logout=this.logout.bind(this);
+    this.submit = this.submit.bind(this);
     }
     componentWillMount()
     {
 
     }
+    
   
     componentDidMount() {
       const script = document.createElement("script");
@@ -76,7 +78,7 @@ export default class Checkout extends React.Component {
       console.log( evt.target.name, evt.target.value )
     }
     checkout()
-    {
+    { let that =this
             let options = {
         key: "rzp_test_c8aoCjBHD5LW2n",
         amount: 40000, // 2000 paise = INR 20, amount in paisa
@@ -86,7 +88,7 @@ export default class Checkout extends React.Component {
         handler: function(response) {
           alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
        //   {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
-       this.submit()
+       that.submit()
         },
        
         theme: {
@@ -155,11 +157,12 @@ export default class Checkout extends React.Component {
            
               {/* navigation */}
           
-              <main className="mt-5 pt-4">
+              <form className="mt-5 pt-4">
                 <div className="container wow fadeIn">
                   {/* Heading */}
                   <h2 className="my-5 h2 text-center">Checkout </h2>
                   {/*Grid row*/}
+
                   <div className="row">
                     {/*Grid column*/}
                     <div className="col-md-8 mb-4">
@@ -199,12 +202,12 @@ export default class Checkout extends React.Component {
                           </div> */}
                           {/*email*/}
                           <div className="md-form mb-5">
-                            <input type="text" id="email" name="billemail" onChange={this.handleChange} className="form-control" placeholder="youremail@example.com" />
+                            <input type="text" id="email" name="billemail" onChange={this.handleChange} className="form-control" required="required" data-error="Email is required." placeholder="youremail@example.com" />
                             <label htmlFor="email" className>Email </label>
                           </div>
                           {/*address*/}
                           <div className="md-form mb-5">
-                            <input type="text" id="address" name="billaddress" onChange={this.handleChange} className="form-control" placeholder="1234 Main St" />
+                            <input type="text" id="address" name="billaddress" onChange={this.handleChange} className="form-control" required="required" data-error="Address is required." placeholder="1234 Main St" />
                             <label htmlFor="address" className>Address</label>
                           </div>
                           {/*address-2*/}
@@ -216,7 +219,7 @@ export default class Checkout extends React.Component {
                           <div className="row" style={{display:'flex',justifyContent:'space-around'}}>
                           <div className="col-lg-4 col-md-12 mb-4">
                             <label htmlFor="address-2" className> Country</label>
-                               <input type="text" id="address-2" name="billcountry" onChange={this.handleChange} className="form-control" placeholder="Country Name" />
+                               <input type="text" id="address-2" name="billcountry" onChange={this.handleChange} required="required" data-error="Country is required." className="form-control" placeholder="Country Name" />
                        
                               <div className="invalid-feedback">
                                 Please select a valid country.
@@ -224,7 +227,7 @@ export default class Checkout extends React.Component {
                             </div>
                             <div className="col-lg-4 col-md-6 mb-4">
                             <label htmlFor="address-2" className>State</label>
-                            <input type="text" id="address-2" name="billstate" onChange={this.handleChange} className="form-control"  required/>
+                            <input type="text" id="address-2" name="billstate" onChange={this.handleChange}  className="form-control"  required="required" data-error="State is required."/>
                             
                               <div className="invalid-feedback">
                                 Please provide a valid state.
@@ -241,14 +244,14 @@ export default class Checkout extends React.Component {
                             {/*Grid column*/}
                             <div className="col-lg-4 col-md-6 mb-4">
                               <label htmlFor="zip">City</label>
-                              <input type="text" name="billcity" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
+                              <input type="text" name="billcity" onChange={this.handleChange} className="form-control" id="zip" required="required" data-error="City is required." />
                               <div className="invalid-feedback">
                                 Name of required.
                               </div>
                             </div>
                             <div className="col-lg-4 col-md-6 mb-4">
                               <label htmlFor="zip">Zip</label>
-                              <input type="text" name="billzip" onChange={this.handleChange} className="form-control" id="zip" placeholder required />
+                              <input type="text" name="billzip" onChange={this.handleChange} className="form-control" id="zip"  required="required" data-error="Zip is required." />
                               <div className="invalid-feedback">
                                 Zip code required.
                               </div>
@@ -348,7 +351,7 @@ export default class Checkout extends React.Component {
               
                           
                           <hr className="mb-4" />
-                          <button className="btn btn-primary btn-lg btn-block"  id="pay" disabled={this.state.formValid} onClick={()=>this.submit()} type="submit">Continue to checkout</button>
+                          <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/>
                         </form>
                       </div>
                       {/*/.Card*/}
@@ -407,7 +410,7 @@ export default class Checkout extends React.Component {
                   </div>
                   {/*Grid row*/}
                 </div>
-              </main>
+              </form>
               {/*Main layout*/}
               {/* CTA AREA */}
               <a href="#0" className="cd-top js-cd-top">Top</a>
