@@ -47,7 +47,7 @@ class Menu extends Component {
             </ul>
             {/* order button */}
             <div className="order button gradient d-md-none d-sm-none d-xl-block d-lg-block">
-              <Link to="/checkout"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
+              <Link to="/#pricing"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
             </div>{/* /.order */}
           </div>{/* /.collapse */}
         </div>{/* /.container */}

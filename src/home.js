@@ -31,7 +31,7 @@ const Home = () => {
                 <span>1770 reviews</span>
               </p>
               <div className="order button gradient"style={{ margin:'20px auto'}}>
-                <Link href="/#pricing">Subscribe Now</Link>
+                <Link to="/#pricing">Subscribe Now</Link>
               </div>{/* /.order */}
             </div>
           </div>{/* /.row */}
@@ -167,7 +167,7 @@ const Home = () => {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary"><a href="checkout.html">Checkout</a></div>
+                  <div className="order button secondary"><Link to="/checkout">Checkout</Link></div>
                 </div>{/* /.price-1*/}
               </div>
               {/*  <div class="col-xl-4 col-lg-4 col-md-6 box-container" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">

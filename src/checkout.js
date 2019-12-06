@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import firebase, { auth, provider,config } from './firebase';
 export default class Checkout extends React.Component {
 
     constructor() {
       super();
+      if (!firebase.apps.length) {
+             firebase.initializeApp(config);
+         }
       this.state = {
         //graduation details
         
@@ -23,13 +27,13 @@ export default class Checkout extends React.Component {
         shipcountry:"",
         shipstate:"",
         shipzip:"",
-        shipcity:'',
-        workexp: "No",
+        shipcity:'',     
         checked:false,
-        college: "",
-        branch: "",
-        isHidden: false,
-        user:null
+        user:null,
+        // formErrors: {email: '', password: ''},
+        // emailValid: false,
+        // passwordValid: false,
+        // formValid: false
       };
     //   this.handleChange = this.handleChange.bind(this);
     //   this.changeAmount = this.changeAmount.bind(this);
@@ -56,6 +60,7 @@ export default class Checkout extends React.Component {
     handleCheckboxChange = (event) =>
     {
     this.setState({ checked: event.target.checked })
+    console.log(this.state)
     
     if(! event.target.checked )
     document.getElementById('autoUpdate').style.display='block'
@@ -63,9 +68,11 @@ export default class Checkout extends React.Component {
     document.getElementById('autoUpdate').style.display ='none'
     }
     handleChange =(evt)=> {
+      let name=evt.target.name
+      let value=evt.target.value 
       // check it out: we get the evt.target.name (which will be either "email" or "password")
       // and use it to target the key on our `state` object with the same name, using bracket syntax
-      this.setState({ [evt.target.name]: evt.target.value });
+      this.setState({ [evt.target.name]: evt.target.value })//,() => { this.validateField(name, value) });
       console.log( evt.target.name, evt.target.value )
     }
     checkout()
@@ -79,6 +86,7 @@ export default class Checkout extends React.Component {
         handler: function(response) {
           alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
        //   {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
+       this.submit()
         },
        
         theme: {
@@ -88,6 +96,50 @@ export default class Checkout extends React.Component {
     
       let rzp = new window.Razorpay(options);
       rzp.open();
+    }
+    submit()
+    {
+      let data=this.state
+      console.log(data)
+      firebase.database().ref('EatDesiUser/').push({data}).then((data)=>{
+        //success callback
+        console.log('data ' , data)
+    }).catch((error)=>{
+        //error callback
+        console.log('error ' , error)
+    })
+    }
+    validateField(fieldName, value) {
+      let fieldValidationErrors = this.state.formErrors;
+      let emailValid = this.state.emailValid;
+      let passwordValid = this.state.passwordValid;
+      console.log(fieldName,value)
+      switch(fieldName) {
+       
+        case 'billemail':
+          emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+          fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+          console.log(fieldValidationErrors.email,"here")
+          break; 
+        case 'password':
+          passwordValid = value.length >= 6;
+          fieldValidationErrors.password = passwordValid ? '': ' is too short';
+          break;
+        default:
+          break;
+      }
+      this.setState({formErrors: fieldValidationErrors,
+                      emailValid: emailValid,
+                      passwordValid: passwordValid
+                    }, this.validateForm);
+    }
+  
+    validateForm() {
+      this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+    }
+  
+    errorClass(error) {
+      return(error.length === 0 ? '' : 'has-error');
     }
     render() {
         return( <div>
@@ -296,7 +348,7 @@ export default class Checkout extends React.Component {
               
                           
                           <hr className="mb-4" />
-                          <button className="btn btn-primary btn-lg btn-block" id="pay"  onClick={()=>this.checkout()} type="submit">Continue to checkout</button>
+                          <button className="btn btn-primary btn-lg btn-block"  id="pay" disabled={this.state.formValid} onClick={()=>this.submit()} type="submit">Continue to checkout</button>
                         </form>
                       </div>
                       {/*/.Card*/}
@@ -307,53 +359,48 @@ export default class Checkout extends React.Component {
                       {/* Heading */}
                       <h4 className="d-flex justify-content-between align-items-center mb-3">
                         <span className="text-muted">Your cart</span>
-                        <span className="badge badge-secondary badge-pill">3</span>
+                        {/* <span className="badge badge-secondary badge-pill">3</span> */}
                       </h4>
                       {/* Cart */}
                       <ul className="list-group mb-3 z-depth-1">
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
                           <div>
-                            <h6 className="my-0">Product name</h6>
-                            <small className="text-muted">Brief description</small>
+                            <h6 className="my-0">Mini India Box</h6>
+                            <small className="text-muted">Box for people with strong tastes</small>
                           </div>
-                          <span className="text-muted">$12</span>
+                          <span className="text-muted">$299</span>
                         </li>
+                      
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
                           <div>
-                            <h6 className="my-0">Second product</h6>
-                            <small className="text-muted">Brief description</small>
+                            <h6 className="my-0">Shipping Charges</h6>
+                            {/* <small className="text-muted">Brief description</small> */}
                           </div>
-                          <span className="text-muted">$8</span>
-                        </li>
-                        <li className="list-group-item d-flex justify-content-between lh-condensed">
-                          <div>
-                            <h6 className="my-0">Third item</h6>
-                            <small className="text-muted">Brief description</small>
-                          </div>
-                          <span className="text-muted">$5</span>
+                          <span className="text-muted">$0</span>
                         </li>
                         <li className="list-group-item d-flex justify-content-between bg-light">
                           <div className="text-success">
                             <h6 className="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
+                            <small>End of Reason </small>
                           </div>
                           <span className="text-success">-$5</span>
                         </li>
                         <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>$20</strong>
+                          <strong>$294</strong>
                         </li>
                       </ul>
                       {/* Cart */}
                       {/* Promo code */}
-                      <form className="card p-2">
+
+                      {/* <form className="card p-2">
                         <div className="input-group">
                           <input type="text" className="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                           <div className="input-group-append">
                             <button className="btn btn-secondary btn-md waves-effect m-0" type="button">Redeem</button>
                           </div>
                         </div>
-                      </form>
+                      </form> */}
                       {/* Promo code */}
                     </div>
                     {/*Grid column*/}
