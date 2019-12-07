@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
@@ -39,11 +39,16 @@
       "last 1 safari version"
     ]
   },
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "file-loader": "^5.0.2",
+    "image-webpack-loader": "^6.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
