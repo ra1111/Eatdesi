@@ -80,11 +80,12 @@ export default class Checkout extends React.Component {
     checkout()
     { let that =this
             let options = {
-        key: "rzp_test_c8aoCjBHD5LW2n",
-        amount: 40000, // 2000 paise = INR 20, amount in paisa
-        name: "JobSutra",
-        description: "JAT Exam ",
-        image: "your pic",
+        key: "rzp_live_fpKwEBZyWkAT2D",
+        amount: 29400, // 2000 paise = INR 20, amount in paisa
+        name: "EatDesi",
+        currency: "USD",
+        description: "MiniIndia Box",
+        image:require( "./images/logo.png"),
         handler: function(response) {
           alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
        //   {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}

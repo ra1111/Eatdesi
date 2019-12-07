@@ -2,6 +2,7 @@
   "name": "subs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eatdesi.in/",
   "dependencies": {
     "firebase": "^7.5.1",
     "jquery": "^3.4.1",
