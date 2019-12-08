@@ -15,7 +15,7 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
     {
       
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader'
+        loader: 'file-loader?name=[name].[ext]'
     
   },
 {
