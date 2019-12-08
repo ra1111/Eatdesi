@@ -100,10 +100,7 @@ render (){
   </div>{/* /.container */}
 </section>{/* /.blog-content*/}
 {/* SUBSCRIBE */}
-<section className="subscribe" style={{backgroundImage: `url(${BackgroundImage})`, 
-                backgroundSize: 'cover', 
-                backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat',}}>
+<section className="subscribe"  style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }}>
   <div className="bgimg" data-parallax="scroll" data-image-src="images/triangles.jpg" data-speed="0.7">
     <div className="container">
       <div className="subscribe-area">
