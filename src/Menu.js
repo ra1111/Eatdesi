@@ -20,7 +20,7 @@ class Menu extends Component {
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light" style={{backgroundColor:"white !important"}}>
         <div className="container">
           {/* LOGO */}
-          <Link className="navbar-brand" to="/"><img src={require('./images/logo.png')} alt="logo header" /></Link>
+          <Link className="navbar-brand" to="/"><img src='./images/logo.png' alt="logo header" /></Link>
           {/* mobile "order gift box"*/}
           <div className="order button gradient d-lg-none d-xl-none" style={{marginRight:'40px'}}>
           <Link to="/checkout"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
