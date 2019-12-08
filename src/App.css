@@ -2653,9 +2653,7 @@ padding: 100px 10px 10px 10px;
   }
 }
 @media (max-width: 768px) { 
-  2 section.call-to-action h3 {
-    text-align: center
-  }
+
   .innerpage .step{
     padding-top: inherit
   }
@@ -2795,9 +2793,7 @@ padding: 100px 10px 10px 10px;
   }
 }
 @media (max-width: 576px) { 
-  2 .call-to-action {
-    margin-top: 40%;
-  }
+
   
   .innerpage .cta-area i {
     height: 30px;
