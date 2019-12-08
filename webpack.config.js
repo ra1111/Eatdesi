@@ -13,15 +13,10 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
   }  },    ]  ,},
   
     {
-      test: /\.(png|jpg|jpeg|gif)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            esModule: false,
-          },
-        },
-      ],
+      
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader'
+    
   },
 {
     test: /\.css$/,  
