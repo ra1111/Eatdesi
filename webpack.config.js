@@ -26,7 +26,7 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
 {
     test: /\.css$/,  
     
-    loaders: ['style-loader', 'css-loader'],
+    loaders: ['style-loader', 'css-loader?url=false'],
 },
 {
   test: /\.(eot|svg|ttf|woff|woff2)$/,
