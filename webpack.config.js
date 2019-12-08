@@ -13,7 +13,7 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
   }  },    ]  ,},
   
     {
-      test: /\.(png|jpeg|svg)$/,  
+      test: /\.(png|jpg|jpeg|gif)$/,
       use: [{
           loader: 'url-loader',
           options: { 
