@@ -150,7 +150,7 @@ const Home = () => {
         {/* PREVIOUS BOXES */}
         {/* PRICING */}
         <section className="pricing" id="pricing">
-          <div className="container" style={{ backgroundImage: `url(${"./images/info.jpg"})` }}>
+          <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12">
                 <h3>Great Value In Every Box</h3>

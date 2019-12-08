@@ -783,10 +783,10 @@ video {
   position: relative;
   text-align:left;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.7)
+
 }
  .call-to-action .row > div {
-  background: none;
+  background: none !important;
   text-align: center;
   color:#fff;
 }
@@ -3009,12 +3009,7 @@ padding: 100px 10px 10px 10px;
 }
 
 @media (max-width: 430px) {  
-  2 .call-to-action h2 {
-    font-size: 40px;
-  }
-  2 .call-to-action .row > div {
-    margin-top: -100px;
-  }
+
   .previous-box #bx-pager {
     font-size: 12px;
   }

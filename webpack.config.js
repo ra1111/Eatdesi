@@ -11,19 +11,17 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
       }
     ]
   }  },    ]  ,},
-  {
-  test: /\.(gif|png|jpe?g|svg)$/i,
-  use: [
-    'file-loader',
+  
     {
-      loader: 'image-webpack-loader',
-      options: {
-        bypassOnDebug: true, // webpack@1.x
-        disable: true, // webpack@2.x and newer
-      },
-    },
-  ],
-},
+      test: /\.(png|jp(e*)g|svg)$/,  
+      use: [{
+          loader: 'url-loader',
+          options: { 
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: 'images/[hash]-[name].[ext]'
+          } 
+      }]
+  },
 {
     test: /\.css$/,  
     
