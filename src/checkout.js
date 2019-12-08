@@ -85,7 +85,7 @@ export default class Checkout extends React.Component {
         name: "EatDesi",
         currency: "USD",
         description: "MiniIndia Box",
-        image:require( "./images/logo.png"),
+        image:require( "./images/logo1.png"),
         handler: function(response) {
           alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
        //   {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
