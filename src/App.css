@@ -2475,7 +2475,7 @@ padding: 100px 10px 10px 10px;
     width: 30%;
   }
   .navbar-light .navbar-brand img{
-    width: auto;
+    width: auto !important;
   }
   .bg-light {
     background-color: rgba(255, 255, 255, 1) !important;
