@@ -15,7 +15,10 @@ output: {       publicPath: '/',    path: resolve('dist'),filename: 'bundle.js' 
     {
       
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader?name=[name].[ext]'
+       use:[ {loader: 'file-loader?name=[name].[ext]',options: {
+        outputPath: 'images'
+      }
+       }]
     
   },
 {
