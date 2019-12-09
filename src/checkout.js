@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase, { auth, provider,config } from './firebase';
+import { PayPalButton } from "react-paypal-button-v2";
 export default class Checkout extends React.Component {
 
     constructor() {
@@ -352,7 +353,26 @@ export default class Checkout extends React.Component {
               
                           
                           <hr className="mb-4" />
-                          <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/>
+                          {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
+                          <PayPalButton
+        amount="294"
+        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+        onSuccess={(details, data) => {
+          alert("Transaction completed by " + details.payer.name.given_name);
+          this.submit()
+          // OPTIONAL: Call your server to save the transaction
+          return fetch("/paypal-transaction-complete", {
+            method: "post",
+            body: JSON.stringify({
+              orderID: data.orderID
+            })
+          });
+        }}
+        options={{
+          clientId: "AY8FtqDKX3hVVaVraOUuI78W74CcaVa7GnDxW3rVv8bZ6ar2GY8_4HvhASjMEeUcQINTVAtKCyQWMra-",
+          currency:"USD"
+        }}
+      />
                         </form>
                       </div>
                       {/*/.Card*/}
