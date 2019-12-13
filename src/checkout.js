@@ -355,7 +355,7 @@ export default class Checkout extends React.Component {
                           <hr className="mb-4" />
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
-        amount="294"
+        amount="1"
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
           alert("Transaction completed by " + details.payer.name.given_name);
@@ -370,7 +370,7 @@ export default class Checkout extends React.Component {
         }}
         options={{
           clientId: "AY8FtqDKX3hVVaVraOUuI78W74CcaVa7GnDxW3rVv8bZ6ar2GY8_4HvhASjMEeUcQINTVAtKCyQWMra-",
-          currency:"USD"
+          currency:"INR"
         }}
       />
                         </form>
