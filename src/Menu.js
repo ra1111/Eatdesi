@@ -23,8 +23,9 @@ class Menu extends Component {
           <Link to="/"><img src='./images/logo1.png' alt="logo header" /></Link>
           {/* mobile "order gift box"*/}
           <div className="order button gradient d-lg-none d-xl-none" style={{marginRight:'40px'}}>
-          <Link to="/checkout"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
-          </div>{/* /.order */}
+          <Link to="/#pricing"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
+          </div>
+          {/* /.order */}
           {/* mobile menu toggle button */}
           <button className="navbar-toggler"  onClick={this._onToggleNav} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
@@ -47,9 +48,7 @@ class Menu extends Component {
               </li>
             </ul>
             {/* order button */}
-            <div className="order button gradient d-md-none d-sm-none d-xl-block d-lg-block">
-              <Link to="/#pricing"><i className="fas fa-shopping-cart" />Order Gift Box</Link>
-            </div>{/* /.order */}
+           
           </div>{/* /.collapse */}
         </div>{/* /.container */}
       </nav>
