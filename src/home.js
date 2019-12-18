@@ -46,15 +46,15 @@ const Home = () => {
               <Review  star="fas  fa-star-half-alt" food="images/snack2.jpg" client_name="Very tasty"  review_desc="Very tasty, the packaging is beautiful and the booklet rounds it up. Arrives right on time. Thank you! " review_author="Oren"/>
                 </div>
                 <div className="review_box_container">
-              <Review  star="fas  fa-star-half-alt" food="images/snack3.jpg" client_name="Such a lovely experience"  review_desc="I loved the experience. My girlfriend and I explored the snacks together and just wished they offered a larger box. ??" review_author="Edua"/>
+              <Review  star="fas  fa-star-half-alt" food="images/snack3.jpeg" client_name="Such a lovely experience"  review_desc="I loved the experience. My girlfriend and I explored the snacks together and just wished they offered a larger box. ??" review_author="Edua"/>
               <Review  star="fas  fa-star-half-alt" food="images/snack4.jpg" client_name="We absolutely love it, everything"  review_desc="We absolutely love it, everything is so interesting, and delicious..Thank You, Thank You, Thank You." review_author="Kathy S."/>
                 </div>
                 <div className="review_box_container">
               <Review  star="fas  fa-star" food="images/snack5.jpg" client_name="Great Indian food!"  review_desc="My son lived in India several years and I gave a half year subscription to him! He loved it!" review_author="David W."/>
-              <Review  star="fas  fa-star" food="images/snack6.jpg" client_name="So much fun!"  review_desc="I took the Mini India Box to my sister's house to share with her and the rest of my family! Seriously." review_author="Megan"/>
+              <Review  star="fas  fa-star" food="images/snack6.jpeg" client_name="So much fun!"  review_desc="I took the Mini India Box to my sister's house to share with her and the rest of my family! Seriously." review_author="Megan"/>
                 </div>
                 <div className="review_box_container">
-              <Review  star="fas  fa-star-half-alt" food="images/snack7.jpg" client_name="Gift tasting box"  review_desc="I bought this for my daughter, she recently visited India and loved it. I knew she would love this gift box, and she did. It was amazing... Thank you.." review_author="Tanya C."/>
+              <Review  star="fas  fa-star-half-alt" food="images/snack7.jpeg" client_name="Gift tasting box"  review_desc="I bought this for my daughter, she recently visited India and loved it. I knew she would love this gift box, and she did. It was amazing... Thank you.." review_author="Tanya C."/>
               <Review  star="fas  fa-star-half-alt" food="images/snack8.jpg" client_name="Cultural trip"  review_desc="Beautifully packaged one of a kind subscription box. Full of delicious stuff, it's a true journey to Indian culture throughout its gastronomic delights! Dhanyavad" review_author="Moreno"/>
                 </div>
 
@@ -251,12 +251,12 @@ const Home = () => {
         </div>{/* /.extra-info  */}
         {/* EXTRA INFO */}
         {/* THE UNBOXING */}
-        {/*   <section class="unboxing">
+          <section class="unboxing">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
                     <h3 class="text-center">The Unboxing</h3>
-                    <p class="section-description">Featured youtubers unboxing the cheese box</p>
+                    <p class="section-description">Indian snacks</p>
                 </div>
             </div>
         </div>
@@ -265,20 +265,20 @@ const Home = () => {
             <div class="row" id="player">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="videoWrapper">
-                        <div><img src="images/video1.jpg" id="introphoto1" alt="video 1"></div>
+                        <div><img src="images/snack_wall.jpeg" id="introphoto1" alt="video 1"/></div>
                         <div class="hidden" id="video1"></div>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="videoWrapper">
-                        <div><img src="images/video2.jpg" id="introphoto2" alt="video 2"></div>
+                        <div><img src="images/snack2.jpg" id="introphoto2" alt="video 2"/></div>
                         <div class="hidden" id="video2"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> */}
+    </section>
         {/* SUBSCRIBE */}
         <section className="subscribe"  style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }}>
           <div className="bgimg" data-parallax="scroll"   data-speed="0.7">

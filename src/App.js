@@ -80,11 +80,11 @@ class App extends Component {
       let hiddenClassId=imageTrigger.attr('id');
       if(hiddenClassId==='video1')
       {
-        autoPlayVideo(hiddenClassId, '7kG9snZbrm0','560','315'); //video code for the left video
+        autoPlayVideo(hiddenClassId, '95slHApFBSA','560','315'); //video code for the left video
       }
       else
       {
-        autoPlayVideo(hiddenClassId, 'dfr02BrzYKQ','560','315'); ////video code for the right video
+        autoPlayVideo(hiddenClassId, 'EnPzb4BXcZ4','560','315'); ////video code for the right video
       }
     });
 
