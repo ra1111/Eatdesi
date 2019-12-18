@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
+import { Carousel } from 'react-responsive-carousel';
 import './App.css'
 import BackgroundImage from './images/triangles.jpg'
-
+import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import Review from './review'
 let imgUrl = './images/traingles.jpg'
 const Home = () => {
     return (
@@ -28,6 +30,7 @@ const Home = () => {
                 <i className="fas fa-star" />
                 <i className="fas fa-star" />
                 <i className="fas fa-star" />
+                <i className="fas  fa-star-half-alt"/>
                 <span>1770 reviews</span>
               </p>
               <div className="order button gradient"style={{ margin:'20px auto'}}>
@@ -36,6 +39,29 @@ const Home = () => {
             </div>
           </div>{/* /.row */}
         </section>{/* /.call-to-action */}
+    
+        <Carousel infiniteLoop showThumbs={false} autoPlay  swipeable={true}>
+        <div className="review_box_container">
+              <Review  star="fas  fa-star" food="images/snack1.jpg" client_name="Love it!"  review_desc="I am always excited to receive my Mini India Box every month. The snacks are unique and yummy! They would also make an awesome gift too!" review_author="Lucy"/>
+              <Review  star="fas  fa-star-half-alt" food="images/snack2.jpg" client_name="Very tasty"  review_desc="Very tasty, the packaging is beautiful and the booklet rounds it up. Arrives right on time. Thank you! " review_author="Oren"/>
+                </div>
+                <div className="review_box_container">
+              <Review  star="fas  fa-star-half-alt" food="images/snack3.jpg" client_name="Such a lovely experience"  review_desc="I loved the experience. My girlfriend and I explored the snacks together and just wished they offered a larger box. ??" review_author="Edua"/>
+              <Review  star="fas  fa-star-half-alt" food="images/snack4.jpg" client_name="We absolutely love it, everything"  review_desc="We absolutely love it, everything is so interesting, and delicious..Thank You, Thank You, Thank You." review_author="Kathy S."/>
+                </div>
+                <div className="review_box_container">
+              <Review  star="fas  fa-star" food="images/snack5.jpg" client_name="Great Indian food!"  review_desc="My son lived in India several years and I gave a half year subscription to him! He loved it!" review_author="David W."/>
+              <Review  star="fas  fa-star" food="images/snack6.jpg" client_name="So much fun!"  review_desc="I took the Mini India Box to my sister's house to share with her and the rest of my family! Seriously." review_author="Megan"/>
+                </div>
+                <div className="review_box_container">
+              <Review  star="fas  fa-star-half-alt" food="images/snack7.jpg" client_name="Gift tasting box"  review_desc="I bought this for my daughter, she recently visited India and loved it. I knew she would love this gift box, and she did. It was amazing... Thank you.." review_author="Tanya C."/>
+              <Review  star="fas  fa-star-half-alt" food="images/snack8.jpg" client_name="Cultural trip"  review_desc="Beautifully packaged one of a kind subscription box. Full of delicious stuff, it's a true journey to Indian culture throughout its gastronomic delights! Dhanyavad" review_author="Moreno"/>
+                </div>
+
+                
+               
+            </Carousel>
+            
         {/* HOW IT WORKS */}
         <section className="how-it-works">
           <div className="container">
@@ -80,7 +106,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-5 col-lg-5 col-xl-5 col-sm-12">
-                <img src="images/info.jpg" alt="hero 3" />
+                <img src="images/snack_box.jpg" alt="hero 3" />
               </div>{/*/.col-7*/}
               <div className="col-md-7 col-lg-7 col-xl-7 col-sm-12">
                 <h3>What's Inside the Box?</h3>
@@ -127,7 +153,7 @@ const Home = () => {
             <div className="row justify-content-center">
               <div className="col-lg-7 col-xl-7 col-md-10">
                 <h5>Time Until Next Shipment:</h5>
-                <div id="next-box-countdown" className="clearfix-home">
+                <div id="next-box-countdown"  style={{color:'white'}}className="clearfix-home">
                   <div>90 <span>days</span></div><div> 20 <span>hours</span></div> <div>00 <span>minutes</span></div>
                 </div>{/*/#next-box-countdown*/}
                 {/* /. remaining-time*/}
@@ -167,7 +193,7 @@ const Home = () => {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary"><Link to="/checkout">Checkout</Link></div>
+                  <div className="order button secondary"><Link to="/sucess">Checkout</Link></div>
                 </div>{/* /.price-1*/}
               </div>
               {/*  <div class="col-xl-4 col-lg-4 col-md-6 box-container" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">

@@ -162,7 +162,7 @@ export default class Checkout extends React.Component {
               <form className="mt-5 pt-4">
                 <div className="container wow fadeIn">
                   {/* Heading */}
-                  <h2 className="my-5 h2 text-center">Checkout </h2>
+                  <h2 className="my-5 h2 text-center">Customer and Shipping Information </h2>
                   {/*Grid row*/}
 
                   <div className="row">
@@ -179,7 +179,7 @@ export default class Checkout extends React.Component {
                             <div className="col-md-6 mb-2">
                               {/*firstName*/}
                               <div className="md-form ">
-                                <input name="billfirst" type="text" id="firstName" className="form-control" />
+                                <input name="billfirst" type="text" id="firstName" required="required" className="form-control" />
                                 <label htmlFor="firstName"  onChange={this.handleChange} className>First name</label>
                               </div>
                             </div>
@@ -346,10 +346,7 @@ export default class Checkout extends React.Component {
                               </div>
                             </div>
                           </div>
-                          <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" id="save-info" />
-                            <label className="custom-control-label" htmlFor="save-info">Save this information for next time</label>
-                          </div>
+                    
               
                           
                           <hr className="mb-4" />
@@ -361,7 +358,7 @@ export default class Checkout extends React.Component {
           alert("Transaction completed by " + details.payer.name.given_name);
           this.submit()
           // OPTIONAL: Call your server to save the transaction
-          return fetch("/paypal-transaction-complete", {
+          return fetch("/sucess", {
             method: "post",
             body: JSON.stringify({
               orderID: data.orderID
@@ -369,7 +366,9 @@ export default class Checkout extends React.Component {
           });
         }}
         options={{
-          clientId: "AY8FtqDKX3hVVaVraOUuI78W74CcaVa7GnDxW3rVv8bZ6ar2GY8_4HvhASjMEeUcQINTVAtKCyQWMra-",
+          clientId:
+         // "AYHbAe9gEmNPHRQ5u0X5PLYdnMsj23nNH72CRw-R87cCJEMDlgCkM5J-dBPDKontT_2qz3_g8COXL_ig ",
+         "AY8FtqDKX3hVVaVraOUuI78W74CcaVa7GnDxW3rVv8bZ6ar2GY8_4HvhASjMEeUcQINTVAtKCyQWMra-",
           currency:"INR"
         }}
       />
@@ -398,6 +397,13 @@ export default class Checkout extends React.Component {
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
                           <div>
                             <h6 className="my-0">Shipping Charges</h6>
+                            {/* <small className="text-muted">Brief description</small> */}
+                          </div>
+                          <span className="text-muted">$0</span>
+                        </li>
+                        <li className="list-group-item d-flex justify-content-between lh-condensed">
+                          <div>
+                            <h6 className="my-0">Taxes</h6>
                             {/* <small className="text-muted">Brief description</small> */}
                           </div>
                           <span className="text-muted">$0</span>

@@ -3,13 +3,15 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './home'
 import Contact from './contact'
 import Checkout from './checkout'
-
+import Sucess from './sucess'
 const Content = () =>{
   return(
     <Switch>
       <Route exact path="/" component={Home}/>
       <Route path="/contact" component={Contact}/>
       <Route path="/checkout" component={Checkout}/>
+      <Route path="/sucess" component={Sucess}/>
+
     </Switch>
   )
 }
