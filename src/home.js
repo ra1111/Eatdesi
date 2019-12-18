@@ -31,7 +31,7 @@ const Home = () => {
                 <i className="fas fa-star" />
                 <i className="fas fa-star" />
                 <i className="fas  fa-star-half-alt"/>
-                <span>1770 reviews</span>
+                <span>770 reviews</span>
               </p>
               <div className="order button gradient"style={{ margin:'20px auto'}}>
                 <Link to="/#pricing">Subscribe Now</Link>
