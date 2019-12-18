@@ -2742,8 +2742,15 @@ padding: 100px 10px 10px 10px;
     opacity: 1;
   }
 }
-@media (max-width: 768px) { 
-
+@media (max-width: 768px) {
+  .review_box_container{
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+  } 
+ .review_box{
+   width: 100%;
+ }
   .innerpage .step{
     padding-top: inherit
   }
