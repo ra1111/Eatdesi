@@ -265,7 +265,7 @@ const Home = () => {
             <div class="row" id="player">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="videoWrapper">
-                        <div><img src="images/snack_wall.jpeg" id="introphoto1" alt="video 1"/></div>
+                        <div><img src="images/snack1.jpg" id="introphoto1" alt="video 1"/></div>
                         <div class="hidden" id="video1"></div>
                     </div>
                 </div>
