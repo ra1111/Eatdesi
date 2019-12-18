@@ -106,7 +106,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-5 col-lg-5 col-xl-5 col-sm-12">
-                <img src="images/snack_box.jpg" alt="hero 3" />
+                <img src="images/snacks_box.jpg" alt="hero 3" />
               </div>{/*/.col-7*/}
               <div className="col-md-7 col-lg-7 col-xl-7 col-sm-12">
                 <h3>What's Inside the Box?</h3>
