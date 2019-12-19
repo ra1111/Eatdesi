@@ -193,7 +193,7 @@ const Home = () => {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary"><Link to="/sucess">Checkout</Link></div>
+                  <div className="order button secondary"><Link to="/checkout">Checkout</Link></div>
                 </div>{/* /.price-1*/}
               </div>
               {/*  <div class="col-xl-4 col-lg-4 col-md-6 box-container" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">

@@ -387,6 +387,9 @@ export default class Checkout extends React.Component {
                       {/* Cart */}
                       <ul className="list-group mb-3 z-depth-1">
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <img src='images/snacks_box.jpg' alt="Mini India Box"/>
+                          </div>
                           <div>
                             <h6 className="my-0">Mini India Box</h6>
                             <small className="text-muted">Box for people with strong tastes</small>
