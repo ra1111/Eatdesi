@@ -369,7 +369,7 @@ export default class Checkout extends React.Component {
           clientId:
          // "AYHbAe9gEmNPHRQ5u0X5PLYdnMsj23nNH72CRw-R87cCJEMDlgCkM5J-dBPDKontT_2qz3_g8COXL_ig ",
          "AY8FtqDKX3hVVaVraOUuI78W74CcaVa7GnDxW3rVv8bZ6ar2GY8_4HvhASjMEeUcQINTVAtKCyQWMra-",
-          currency:"INR"
+          currency:"USD"
         }}
       />
                         </form>

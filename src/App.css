@@ -2322,7 +2322,10 @@ border: 1px solid #e1e1e1;
   margin-bottom: 15px;
   margin-right: 5px;
 }
+.paypal-buttons {
+  display: 'none'
 
+}
 /* ABOUT US PAGE */
 .page-content .signature {
 width: auto;
