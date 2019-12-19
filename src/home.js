@@ -168,7 +168,7 @@ const Home = () => {
               <h3>Subscribe Now</h3>
               <p className="section-description">before the time runs out, to get the next month’s goodie box</p>
               <div className="order button gradient">
-                <Link href="/#pricing">See Subscription Plans</Link>
+                <Link to="/#pricing">See Subscription Plans</Link>
               </div>{/* /.order */}
             </div>
           </div>{/* /.row */}

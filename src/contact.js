@@ -17,8 +17,8 @@ render (){
               <div className="step one clearfix">
                 <i className="fas fa-clipboard-list" />
                 <div className="step-content">
-                  <h4>Choose a Cheese Plan</h4>
-                  <p>1, 3, 6, or 12 month plans available. Cancel any time. </p>
+                  <h4>Choose a subscription Plan</h4>
+                  <p>  6 month plans available.  </p>
                 </div>{/* /.step-content*/}
               </div>{/* /.step */}
             </div>
@@ -27,7 +27,7 @@ render (){
                 <i className="fas fa-box-open" />
                 <div className="step-content">
                   <h4>We hand-pick a box for you</h4>
-                  <p>Based on the best cheeses in the world. Cheeses and accessories for you</p>
+                  <p>Based on the best snacks in the India. </p>
                 </div>{/* /.step-content */}
               </div>{/* /.step */}
             </div>{/* /.col-4 */}
@@ -107,7 +107,7 @@ render (){
         <div className="row">
           <div className="col-12 subscribe-text">
             <h3>Subscribe to our newsletter</h3>
-            <p className="section-description">and get 20% off from your next cheesebox subscription</p>
+            <p className="section-description">and get 20% off from your next eatdesi subscription</p>
           </div>{/* /.col*/}
           <div className="col-12">
             <form>
