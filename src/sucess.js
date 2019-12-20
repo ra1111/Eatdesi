@@ -8,6 +8,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
      render()
      {console.log(this.props,"here")
+     let details=this.props.location.state.details.payer
          return(
             <div class="bg">
   
@@ -38,8 +39,8 @@ import { HashLink as Link } from 'react-router-hash-link';
                 
                 <img src="https://image.shutterstock.com/z/stock-vector-male-avatar-profile-picture-vector-467599115.jpg" class="card__avatar"/>
                 <div class="card__recipient-info">
-                  <p class="card__recipient">Nath Green</p>
-                  <p class="card__email">hello@nathgreen.co.uk</p>
+                  <p class="card__recipient">{details.name.given_name} {details.name.surname}</p>
+                  <p class="card__email">{details.email_address}</p>
                 </div>
                 
                 <h1 class="card__price"><span>$</span>294<span>.00</span></h1>
@@ -57,7 +58,7 @@ import { HashLink as Link } from 'react-router-hash-link';
               
               <div class="card__tags">
                   <span class="card__tag">completed</span>
-                  <span class="card__tag">#123456789</span>        
+                  <span class="card__tag">#{details.payer_id}</span>        
               </div>
               
             </div>

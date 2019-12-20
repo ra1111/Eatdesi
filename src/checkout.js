@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase, { auth, provider,config } from './firebase';
 import { PayPalButton } from "react-paypal-button-v2";
+
 export default class Checkout extends React.Component {
 
     constructor() {
@@ -101,18 +102,21 @@ export default class Checkout extends React.Component {
       let rzp = new window.Razorpay(options);
       rzp.open();
     }
-    submit()
-    {
+    submit(details)
+    { 
       let data=this.state
       console.log(data)
       firebase.database().ref('EatDesiUser/').push({data}).then((data)=>{
         //success callback
         console.log('data ' , data)
+      
     }).catch((error)=>{
         //error callback
         console.log('error ' , error)
     })
+    this.props.history.push("/sucess",{details:details});
     }
+   
     validateField(fieldName, value) {
       let fieldValidationErrors = this.state.formErrors;
       let emailValid = this.state.emailValid;
@@ -355,13 +359,16 @@ export default class Checkout extends React.Component {
         amount="294"
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
-          alert("Transaction completed by " + details.payer.name.given_name);
-          this.submit()
+
+         
+          this.submit(details)
           // OPTIONAL: Call your server to save the transaction
           return fetch("/sucess", {
             method: "post",
             body: JSON.stringify({
-              orderID: data.orderID
+              orderID: data.orderID,
+              details:details,
+              data:data
             })
           });
         }}
