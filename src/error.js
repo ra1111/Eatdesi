@@ -7,7 +7,7 @@ export default class Sucess extends Component {
 return(
     
     <div className="error">
-<div className="error_button"><Link to="/" style={{color:'white'}}>Go Back to Home</Link></div>
+<div className="error_button"><Link to="/" style={{color:'white'}}> Go Back </Link></div>
   </div>
 )
 }
