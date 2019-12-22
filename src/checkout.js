@@ -58,7 +58,7 @@ export default class Checkout extends React.Component {
       script.async = true;
   
       document.body.appendChild(script);
-    
+    console.log(this.props,"here")
   
     }
     handleCheckboxChange = (event) =>
@@ -356,7 +356,7 @@ export default class Checkout extends React.Component {
                           <hr className="mb-4" />
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
-        amount="294"
+        amount={this.props.location.state.price - 5 }
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
 
@@ -401,7 +401,7 @@ export default class Checkout extends React.Component {
                             <h6 className="my-0">Mini India Box</h6>
                             <small className="text-muted">Box for people with strong tastes</small>
                           </div>
-                          <span className="text-muted">$299</span>
+                          <span className="text-muted">${this.props.location.state.price}</span>
                         </li>
                       
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
@@ -427,7 +427,7 @@ export default class Checkout extends React.Component {
                         </li>
                         <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>$294</strong>
+                          <strong>${this.props.location.state.price -5}</strong>
                         </li>
                       </ul>
                       {/* Cart */}

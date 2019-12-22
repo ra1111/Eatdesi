@@ -7,7 +7,17 @@ import BackgroundImage from './images/triangles.jpg'
 import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import Review from './review'
 let imgUrl = './images/traingles.jpg'
-const Home = () => {
+export default class Home  extends React.Component {
+  constructor() {
+    super();}
+    Checkout(price)
+    {
+      console.log("coming",price)
+      this.props.history.push("/checkout",{price:price})
+
+    }
+  render()
+  {
     return (
     <div>
  <div>
@@ -193,26 +203,27 @@ const Home = () => {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary"><Link to="/checkout">Checkout</Link></div>
+                  <div className="order button secondary" style={{color:'black',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
                 </div>{/* /.price-1*/}
               </div>
-              {/*  <div class="col-xl-4 col-lg-4 col-md-6 box-container" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
+               <div class="col-xl-4 col-lg-4 col-md-6 box-container" >
                         <div class="price-2"> 
-                            <i class="price">$199</i>
-                            <h5>Half Yearly subscription Box</h5>
+                            <i class="price">$149</i>
+                            <h5>Three months subscription Box</h5>
                            
                             <ul>
-                                <li>flexible subscription</li>
+                                <li>8-12  snacks per box</li>
                                 <li>Free shipping worldwide</li>
                                 <li> Indian snacks, candies curated around a fun cultural theme</li>
                             </ul>
-                            <div class="order button gradient">
-                                <a href="checkout.html">Checkout</a>
+                            <div  style={{color:'white',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(149)}class="order button gradient">
+                               Checkout
                             </div>
-                        </div> */}{/* /.price-1*/}
+                        </div>{/* /.price-1*/}
             </div>
           </div>{/* /.col*/}
           {/* /.row*/}
+          </div>
           {/* /.container-fluid*/}
         </section>{/* /.pricing  */}
         <div className="extra-info">
@@ -379,4 +390,4 @@ const Home = () => {
       </div>
     </div>
   )}
-  export default Home
+    }
