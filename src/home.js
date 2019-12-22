@@ -185,7 +185,7 @@ export default class Home  extends React.Component {
         </section>{/* /.call-to-action */}
         {/* PREVIOUS BOXES */}
         {/* PRICING */}
-        <section className="pricing" id="pricing">
+        <section className="pricing" style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }} id="pricing">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12">
