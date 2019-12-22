@@ -30,7 +30,7 @@ export default class Checkout extends React.Component {
         shipstate:"",
         shipzip:"",
         shipcity:'',     
-        checked:false,
+        checked:true,
         user:null,
         // formErrors: {email: '', password: ''},
         // emailValid: false,
@@ -66,10 +66,7 @@ export default class Checkout extends React.Component {
     this.setState({ checked: event.target.checked })
     console.log(this.state)
     
-    if(! event.target.checked )
-    document.getElementById('autoUpdate').style.display='block'
-    else
-    document.getElementById('autoUpdate').style.display ='none'
+
     }
     handleChange =(evt)=> {
       let name=evt.target.name
@@ -268,9 +265,11 @@ export default class Checkout extends React.Component {
                           <hr />
                           <label htmlFor="address">Shipping Address</label>
                           <div className="custom-control custom-checkbox">
-                            <input type="checkbox" checked={this.state.checked}
+                            <input type="checkbox" checked={this.state.checked} value={this.state.checked}
             onChange={(e)=>this.handleCheckboxChange(e)}  className="custom-control-input" id="same-address" />
+     
                             <label className="custom-control-label" htmlFor="same-address">Shipping address is the same as my billing address</label>
+                            {!this.state.checked &&
                             <div id="autoUpdate">
                               {/*Grid row*/}
                               <div className="row">
@@ -349,6 +348,7 @@ export default class Checkout extends React.Component {
                                 {/*Grid column*/}
                               </div>
                             </div>
+                            }
                           </div>
                     
               
