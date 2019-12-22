@@ -203,7 +203,7 @@ export default class Home  extends React.Component {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
+                  <div className="order button secondary" style={{color:'white',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
                 </div>{/* /.price-1*/}
               </div>
                <div class="col-xl-4 col-lg-4 col-md-6 box-container"style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }} >
@@ -230,7 +230,7 @@ export default class Home  extends React.Component {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(399)}>Checkout</div>
+                  <div className="order button secondary" style={{color:'white',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(399)}>Checkout</div>
                 </div>
                 </div>
           </div>{/* /.col*/}

@@ -9,7 +9,9 @@ body {
   line-height: 22px;
   overflow-x: hidden;
 }
-
+.pricing ul li{
+  color: white;
+}
 .subs{
   display: flex;
   justify-content: center;
@@ -3343,6 +3345,9 @@ padding: 100px 10px 10px 10px;
   .pricing .price-1 .price, .pricing .price-2 .price, .pricing .price-3 .price {
     left: 35%;
     width:99px;
+  }
+  .pricing ul li{
+    color: white;
   }
   h2 {
     font-size: 43px;
