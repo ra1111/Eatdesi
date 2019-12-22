@@ -185,7 +185,7 @@ export default class Home  extends React.Component {
         </section>{/* /.call-to-action */}
         {/* PREVIOUS BOXES */}
         {/* PRICING */}
-        <section className="pricing" style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }} id="pricing">
+        <section className="pricing"  id="pricing">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12">
@@ -194,7 +194,7 @@ export default class Home  extends React.Component {
               </div>{/* /.col*/}
             </div>{/* /.row */}
             <div className="row subs">
-              <div className="col-xl-4 col-lg-4 col-md-6 box-container">
+              <div className="col-xl-4 col-lg-4 col-md-6 box-container" style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }}>
                 <div className="price-2"> 
                   <i className="price">$299</i>
                   <h5>Half Yearly Subscription Box</h5>
@@ -206,7 +206,7 @@ export default class Home  extends React.Component {
                   <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
                 </div>{/* /.price-1*/}
               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 box-container" >
+               <div class="col-xl-4 col-lg-4 col-md-6 box-container"style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }} >
                         <div class="price-2"> 
                             <i class="price">$149</i>
                             <h5>Three months subscription Box</h5>
@@ -221,7 +221,7 @@ export default class Home  extends React.Component {
                             </div>
                         </div>{/* /.price-1*/}
             </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 box-container">
+            <div className="col-xl-4 col-lg-4 col-md-6 box-container"style={{ backgroundImage: `url(${"./images/triangles.jpg"})` }}>
                 <div className="price-2"> 
                   <i className="price">$399</i>
                   <h5>Yearly Subscription Box</h5>
