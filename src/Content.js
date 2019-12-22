@@ -4,6 +4,7 @@ import Home from './home'
 import Contact from './contact'
 import Checkout from './checkout'
 import Sucess from './sucess'
+import error from './error'
 const Content = () =>{
   return(
     <Switch>
@@ -11,6 +12,7 @@ const Content = () =>{
       <Route path="/contact" component={Contact}/>
       <Route path="/checkout" component={Checkout}/>
       <Route path="/sucess" component={Sucess}/>
+      <Route path="/error" component={error}/>
 
     </Switch>
   )

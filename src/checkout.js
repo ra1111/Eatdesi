@@ -99,6 +99,12 @@ export default class Checkout extends React.Component {
       let rzp = new window.Razorpay(options);
       rzp.open();
     }
+    error(e)
+    {
+      console.log(e,"error")
+     // e.preventDefault()
+      this.props.history.push('error')
+    }
     submit(details)
     { 
       let data=this.state
@@ -357,7 +363,8 @@ export default class Checkout extends React.Component {
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
         amount={this.props.location.state.price - 5 }
-        onError={(e)=>{e.preventDefault()}}
+        onError={(e)=>{this.error(e)}}
+        onCancel={(e)=>{this.error(e)}}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
 
