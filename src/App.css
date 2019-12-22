@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 .pricing ul li{
-  color: white;
+  color: black;
 }
 .subs{
   display: flex;
@@ -3347,7 +3347,7 @@ padding: 100px 10px 10px 10px;
     width:99px;
   }
   .pricing ul li{
-    color: white;
+    color: black;
   }
   h2 {
     font-size: 43px;

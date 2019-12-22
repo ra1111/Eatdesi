@@ -1,8 +1,42 @@
 import React, { Component } from "react";
+import firebase, { auth, provider,config } from './firebase';
 import './App.css';
 import BackgroundImage from './images/triangles.jpg'
 export default class Contact extends React.Component {
+  constructor()
+  { super()
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+  }
+    this.state={
+      name:'',
+      email:'',
+      mobile:'',
+      message:'',
+    }
+    
+  }
+  handleChange =(evt)=> {
+    let name=evt.target.name
+    let value=evt.target.value 
+    // check it out: we get the evt.target.name (which will be either "email" or "password")
+    // and use it to target the key on our `state` object with the same name, using bracket syntax
+    this.setState({ [evt.target.name]: evt.target.value })//,() => { this.validateField(name, value) });
+    console.log( evt.target.name, evt.target.value )
+  }
+  Submit()
+  {
+    let data=this.state
+    console.log(data)
+  firebase.database().ref('EatDesiMessage/').push({data}).then((data)=>{
+    //success callback
+    console.log('data ' , data)
   
+}).catch((error)=>{
+    //error callback
+    console.log('error ' , error)
+})
+  }
 render (){ 
     return(
 <div>
@@ -67,30 +101,30 @@ render (){
       {/* CONTACT DETAILS */}
       <div className="col-6">
        
-        <form method="post" action="contact.php" id="contact-form" role="form">
+        <form  >
           <div className="messages" />
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" placeholder="Name*:" className="form-control" id="name" name="name" required="required" data-error="Name is required." />
+            <input type="text" placeholder="Name*:" className="form-control" onChange={this.handleChange}  name="name" required="required" data-error="Name is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" placeholder="Email*:" className="form-control" id="email" name="email" required="required" data-error="Email is required." />
+            <input type="email" placeholder="Email*:" className="form-control" onChange={this.handleChange} name="email" required="required" data-error="Email is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="telephone">Telephone</label>
-            <input type="tel" placeholder="Telephone*:" className="form-control" id="telephone" name="telephone" required="required" data-error="Telephone is required." />
+            <input type="tel" placeholder="Telephone*:" className="form-control"  onChange={this.handleChange} name="mobile" required="required" data-error="Telephone is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea placeholder="Message*:" className="form-control" id="message" name="message" required="required" data-error="Message is required." defaultValue={""} />
+            <textarea placeholder="Message*:" className="form-control"  onChange={this.handleChange} name="message" required="required" data-error="Message is required." defaultValue={""} />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
-            <input id="submit" name="submit" type="submit" defaultValue="Send Message" />
+            <input type="submit"  id="submit" className="btn btn-primary btn-lg btn-block" onClick={()=>this.Submit()}  defaultValue="Send Message" />
           </div>
         </form>
       </div>{/* /.col-6 */}
