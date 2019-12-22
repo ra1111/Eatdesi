@@ -24,13 +24,19 @@ export default class Contact extends React.Component {
     this.setState({ [evt.target.name]: evt.target.value })//,() => { this.validateField(name, value) });
     console.log( evt.target.name, evt.target.value )
   }
-  Submit()
-  {
+  Submit(e)
+  {e.preventDefault()
     let data=this.state
     console.log(data)
   firebase.database().ref('EatDesiMessage/').push({data}).then((data)=>{
     //success callback
     console.log('data ' , data)
+    this.setState({
+      name:'',
+      email:'',
+      mobile:'',
+      message:'',
+    });
   
 }).catch((error)=>{
     //error callback
@@ -105,26 +111,26 @@ render (){
           <div className="messages" />
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" placeholder="Name*:" className="form-control" onChange={this.handleChange}  name="name" required="required" data-error="Name is required." />
+            <input type="text" placeholder="Name*:" value={this.state.name} className="form-control" onChange={this.handleChange}  name="name" required="required" data-error="Name is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" placeholder="Email*:" className="form-control" onChange={this.handleChange} name="email" required="required" data-error="Email is required." />
+            <input type="email" placeholder="Email*:"value={this.state.email} className="form-control" onChange={this.handleChange} name="email" required="required" data-error="Email is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="telephone">Telephone</label>
-            <input type="tel" placeholder="Telephone*:" className="form-control"  onChange={this.handleChange} name="mobile" required="required" data-error="Telephone is required." />
+            <input type="tel" placeholder="Telephone*:"  value={this.state.mobile} className="form-control"  onChange={this.handleChange} name="mobile" required="required" data-error="Telephone is required." />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea placeholder="Message*:" className="form-control"  onChange={this.handleChange} name="message" required="required" data-error="Message is required." defaultValue={""} />
+            <textarea placeholder="Message*:" className="form-control"  value={this.state.message} onChange={this.handleChange} name="message" required="required" data-error="Message is required." defaultValue={""} />
             <div className="help-block with-errors" />
           </div>
           <div className="form-group">
-            <input type="submit"  id="submit" className="btn btn-primary btn-lg btn-block" onClick={()=>this.Submit()}  defaultValue="Send Message" />
+            <input type="submit"  id="submit" className="btn btn-primary btn-lg btn-block" onClick={(e)=>this.Submit(e)}  defaultValue="Send Message" />
           </div>
         </form>
       </div>{/* /.col-6 */}

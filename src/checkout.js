@@ -357,6 +357,7 @@ export default class Checkout extends React.Component {
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
         amount={this.props.location.state.price - 5 }
+        onError={(e)=>{e.preventDefault()}}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
 
@@ -395,7 +396,7 @@ export default class Checkout extends React.Component {
                       <ul className="list-group mb-3 z-depth-1">
                         <li className="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <img src='images/snacks_box.jpg' alt="Mini India Box"/>
+                            <img src='images/snack_box.jpg' alt="Mini India Box"/>
                           </div>
                           <div>
                             <h6 className="my-0">Mini India Box</h6>

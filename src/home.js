@@ -331,7 +331,7 @@ export default class Home  extends React.Component {
                           <input type="text" onChange={this.handleChange} name="email" placeholder="Your Email:" />
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                          <button className="subscribe-me" onClick={()=>this.Subscribe()}>Subscribe</button>
+                          <button className="subscribe-me" onClick={(e)=>this.Subscribe(e)}>Subscribe</button>
                         </div>
                       </div>
                     </form>
