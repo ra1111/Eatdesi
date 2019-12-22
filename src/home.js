@@ -203,7 +203,7 @@ export default class Home  extends React.Component {
                     <li>Free shipping worldwide</li>
                     <li> Indian snacks, candies curated around a fun cultural theme</li>
                   </ul>
-                  <div className="order button secondary" style={{color:'black',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
+                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
                 </div>{/* /.price-1*/}
               </div>
                <div class="col-xl-4 col-lg-4 col-md-6 box-container" >
@@ -216,12 +216,27 @@ export default class Home  extends React.Component {
                                 <li>Free shipping worldwide</li>
                                 <li> Indian snacks, candies curated around a fun cultural theme</li>
                             </ul>
-                            <div  style={{color:'white',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(149)}class="order button gradient">
+                            <div  style={{color:'white',cursor: 'pointer',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(149)}class="order button gradient">
                                Checkout
                             </div>
                         </div>{/* /.price-1*/}
             </div>
+            <div className="col-xl-4 col-lg-4 col-md-6 box-container">
+                <div className="price-2"> 
+                  <i className="price">$399</i>
+                  <h5>Yearly Subscription Box</h5>
+                  <ul>
+                    <li>14-16 snacks per box</li>
+                    <li>Free shipping worldwide</li>
+                    <li> Indian snacks, candies curated around a fun cultural theme</li>
+                  </ul>
+                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(399)}>Checkout</div>
+                </div>
+                </div>
           </div>{/* /.col*/}
+        
+     
+              
           {/* /.row*/}
           </div>
           {/* /.container-fluid*/}
