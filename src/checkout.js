@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase, { auth, provider,config } from './firebase';
 import { PayPalButton } from "react-paypal-button-v2";
-
+let valid="FB15"
 export default class Checkout extends React.Component {
 
     constructor() {
@@ -32,6 +32,8 @@ export default class Checkout extends React.Component {
         shipcity:'',     
         checked:true,
         user:null,
+        promo:"",
+        applied:false
         // formErrors: {email: '', password: ''},
         // emailValid: false,
         // passwordValid: false,
@@ -148,7 +150,21 @@ export default class Checkout extends React.Component {
     validateForm() {
       this.setState({formValid: this.state.emailValid && this.state.passwordValid});
     }
-  
+  redeem()
+  { 
+    if(!this.state.applied)
+    {
+    if (this.state.promo.toUpperCase===valid.toUpperCase)
+    {
+      alert("Coupon Code  Applied")
+      this.setState({applied:true,promo:""})
+
+    }
+  }
+  else{
+    alert("Coupon Code already used")
+  }
+  }
     errorClass(error) {
       return(error.length === 0 ? '' : 'has-error');
     }
@@ -362,7 +378,7 @@ export default class Checkout extends React.Component {
                           <hr className="mb-4" />
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
-        amount={this.props.location.state.price - 5 }
+        amount={this.state.applied? this.props.location.state.price - 15:this.props.location.state.price - 5 }
         onError={(e)=>{this.error(e)}}
         onCancel={(e)=>{this.error(e)}}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
@@ -433,22 +449,39 @@ export default class Checkout extends React.Component {
                           </div>
                           <span className="text-success">-$5</span>
                         </li>
+                        {this.state.applied &&
+                        <li className="list-group-item d-flex justify-content-between bg-light">
+                          <div className="text-success">
+                            <h6 className="my-0">Promo code</h6>
+                            <small>FB15 </small>
+                          </div>
+                          <span className="text-success">-$10</span>
+                        </li>
+                        }
+                        {this.state.applied?
+                          <li className="list-group-item d-flex justify-content-between">
+                          <span>Total (USD)</span>
+                          <strong>${this.props.location.state.price - 15}</strong>
+                        </li>
+                        :
                         <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>${this.props.location.state.price -5}</strong>
+                          <strong>${this.props.location.state.price - 5}</strong>
                         </li>
+                        }
+                        
                       </ul>
                       {/* Cart */}
                       {/* Promo code */}
 
-                      {/* <form className="card p-2">
+                      <form className="card p-2">
                         <div className="input-group">
-                          <input type="text" className="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                          <input type="text" className="form-control" placeholder="Promo code" onChange={this.handleChange}  value={this.state.promo}name="promo" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                           <div className="input-group-append">
-                            <button className="btn btn-secondary btn-md waves-effect m-0" type="button">Redeem</button>
+                            <button className="btn btn-secondary btn-md waves-effect m-0"  onClick={()=>this.redeem()} type="button">Redeem</button>
                           </div>
                         </div>
-                      </form> */}
+                      </form>
                       {/* Promo code */}
                     </div>
                     {/*Grid column*/}
