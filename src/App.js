@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import $ from "jquery"
+import ReactGA from 'react-ga';
 import Content from './Content'
 import Menu from './Menu'
 import './loader.js'
 class App extends Component {
   componentDidMount()
 {
+  
+    ReactGA.initialize('UA-154846912-1');
+    ReactGA.pageview('/');
+
   var countDownDate = new Date("Feb 5, 2020 00:00:00").getTime();
         
         // Update the count down every 1 second
