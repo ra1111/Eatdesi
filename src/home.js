@@ -18,8 +18,17 @@ export default class Home  extends React.Component {
     Checkout(price)
     {
       console.log("coming",price)
-      this.props.history.push("/checkout",{price:price})
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        this.props.history.push("/mcheckout",{price:price})
+         }
+         else{
+          this.props.history.push("/checkout",{price:price})
+         }
+      
 
+    }
+    componentDidMount(){
+     
     }
 
   render()
