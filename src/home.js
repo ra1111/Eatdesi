@@ -202,41 +202,49 @@ export default class Home  extends React.Component {
             <div className="row subs">
               <div className="col-xl-4 col-lg-4 col-md-6 box-container" >
                 <div className="price-2"> 
-                  <i className="price">$299</i>
+                  <i className="price">$156</i>
                   <h5>Half Yearly Subscription Box</h5>
+                  <h6>Value for money</h6>
                   <ul>
                     <li>10-14 snacks per box</li>
+                    <li> $25.99/Box</li>
+                    <li>Billed Every 6 Months</li>
                     <li>Free shipping worldwide</li>
-                    <li> Indian snacks, candies curated around a fun cultural theme</li>
+                
                   </ul>
-                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
+                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(156)}>Checkout</div>
                 </div>{/* /.price-1*/}
               </div>
                <div class="col-xl-4 col-lg-4 col-md-6 box-container" >
                         <div class="price-2"> 
-                            <i class="price">$149</i>
+                            <i class="price">$78</i>
                             <h5>Three months subscription Box</h5>
-                           
+                           <h6>Most Popular</h6>
                             <ul>
-                                <li>8-12  snacks per box</li>
+                                <li>10-12  snacks per box</li>
+                                
+                                <li> $25.99/Box</li>
+                                <li>Billed Every 3 Months</li>
                                 <li>Free shipping worldwide</li>
-                                <li> Indian snacks, candies curated around a fun cultural theme</li>
                             </ul>
-                            <div  style={{color:'black',cursor: 'pointer',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(149)}class="order button gradient">
+                            <div  style={{color:'black',cursor: 'pointer',lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(78)}class="order button gradient">
                                Checkout
                             </div>
                         </div>{/* /.price-1*/}
             </div>
             <div className="col-xl-4 col-lg-4 col-md-6 box-container">
                 <div className="price-2"> 
-                  <i className="price">$399</i>
+                  <i className="price">$299</i>
                   <h5>Yearly Subscription Box</h5>
+                  <h6>Most Satisfying</h6>
                   <ul>
                     <li>14-16 snacks per box</li>
+                    <li> $25.99/Box</li>
+                    <li>Billed Every 12 Months</li>
                     <li>Free shipping worldwide</li>
-                    <li> Indian snacks, candies curated around a fun cultural theme</li>
+                    
                   </ul>
-                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(399)}>Checkout</div>
+                  <div className="order button secondary" style={{color:'black',cursor: "pointer",lineHeight:'40px',textTransform:'uppercase',padding:'3px 18px'}}  onClick={()=>this.Checkout(299)}>Checkout</div>
                 </div>
                 </div>
           </div>{/* /.col*/}

@@ -442,31 +442,31 @@ export default class Checkout extends React.Component {
                           </div>
                           <span className="text-muted">$0</span>
                         </li>
-                        <li className="list-group-item d-flex justify-content-between bg-light">
+                        {/* <li className="list-group-item d-flex justify-content-between bg-light">
                           <div className="text-success">
                             <h6 className="my-0">Promo code</h6>
                             <small>End of Reason </small>
                           </div>
                           <span className="text-success">-$5</span>
-                        </li>
+                        </li> */}
                         {this.state.applied &&
                         <li className="list-group-item d-flex justify-content-between bg-light">
                           <div className="text-success">
                             <h6 className="my-0">Promo code</h6>
-                            <small>FB15 </small>
+                            <small>FB5 </small>
                           </div>
-                          <span className="text-success">-$10</span>
+                          <span className="text-success">-$5</span>
                         </li>
                         }
                         {this.state.applied?
                           <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>${this.props.location.state.price - 15}</strong>
+                          <strong>${this.props.location.state.price - 5}</strong>
                         </li>
                         :
                         <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>${this.props.location.state.price - 5}</strong>
+                          <strong>${this.props.location.state.price }</strong>
                         </li>
                         }
                         
