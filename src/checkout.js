@@ -378,7 +378,7 @@ export default class Checkout extends React.Component {
                           <hr className="mb-4" />
                           {/* <input className="btn btn-primary btn-lg btn-block"  name="Continue to checkout" type="submit"  id="pay" disabled={this.state.formValid} onClick={()=>this.checkout()} defaultValue="Continue to checkout"/> */}
                           <PayPalButton
-        amount={this.state.applied? this.props.location.state.price - 15:this.props.location.state.price - 5 }
+        amount={this.state.applied? this.props.location.state.price - 5:this.props.location.state.price  }
         onError={(e)=>{this.error(e)}}
         onCancel={(e)=>{this.error(e)}}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
@@ -461,7 +461,7 @@ export default class Checkout extends React.Component {
                         {this.state.applied?
                           <li className="list-group-item d-flex justify-content-between">
                           <span>Total (USD)</span>
-                          <strong>${this.props.location.state.price - 5}</strong>
+                          <strong>${this.props.location.state.price -5}</strong>
                         </li>
                         :
                         <li className="list-group-item d-flex justify-content-between">
